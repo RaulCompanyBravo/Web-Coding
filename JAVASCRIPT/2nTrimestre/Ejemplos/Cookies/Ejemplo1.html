@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body onload="comprobarCookie()">
+        <script type="text/javascript">
+            //setCookie("usuario",12,365)
+            //var usuario;
+            //var nombreCookie1="Rojo"
+            //console.log(document.cookie(nombreCookie1));
+            function getCookie(nombre){
+                var nomCookie=nombre+"=";
+                var caracter=document.cookie.split(";");
+                console.log("caracter"+caracter)
+                var c;
+                for(var i=0;i<caracter.length;i++){
+                    c=caracter[i];
+                    //console.log("c"+c)
+                 console.log("dsadsad"+c.indexOf(nomCookie)==0);
+                    if(c.indexOf(nomCookie)==0){
+                        return c.substring(nomCookie.length,c.length)
+
+                    }
+                    
+                }
+                return "";
+            }
+            function setCookie(nombre,valor,duracion){
+                var d=new Date();
+                d.setTime(d.getTime() + duracion*24*60*60);
+                var expiracion="expires="+d.toUTCString()
+                
+                document.cookie=nombre+"="+valor+";"+expiracion;
+            }
+            
+            function comprobarCookie(){
+                var usuario=getCookie("usuario");
+                console.log("uuuuuuuuuuuuuuu"+usuario)
+                if(usuario!="" && usuario!=null){
+                    alert("Bienvenido de nuevo " + usuario);
+                   
+                }else{
+                    usuario=prompt("Introduce tu nombre");
+                }
+                
+                if(usuario!="" && usuario!=null){
+                    setCookie("usuario",usuario,365);
+                }
+            }
+            
+            
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo 1</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+	$(document).on('mobileinit'),function(){
+		$.mobile.defaultPageTransition="slide";
+	});
+	</script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.estilos.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div data-role="header"><img src="img/jqueryMobile.png"> </div>
+		<div data-role="content"><a href="#curso" class="btn btn-primary btn-block" role="button" data-role="button">Entrar</a></div>
+		<div data-role="footer"> <h1>DAW 2016</h1> </div>
+	</div>
+	<div data-role="page" id="curso">
+		<div data-role="header"> 
+		<ul>
+			<li>Ejemplo 1</li>
+			<li>Ejemplo 2</li>
+			<li>Ejemplo 3</li>
+		</ul>
+		</div>
+		<div data-role="content"><a data-rel="back" data-role="button">Volver</a></div>
+		<div data-role="footer"> <h1>DAW 2016</h1> </div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	var num=parseInt(prompt("Introduce un número"))
+	var  p=[];
+	//p[0]=0;
+	for (var j =0; j >= num; j++){
+		p[j]=j;
+		document.write(p[j]);
+	};
+for (var i = 1; i < num +1; i++) {
+	for (var o = 1; o < num +1; o++) {
+		res=num/i;
+		console.log(res)
+		res=p[o];
+
+	};
+};
+	for (var g = 1; g < num +1; g++){
+		if (p[g]%g==0){
+			document.write("OK")
+		} else {
+			document.write("FAIL")
+		}
+	}
+
+
+	//document.write(p[1])
+	//document.write(p[num])
+
+/*
+var esprimo=true;
+var divisor=2;
+var num=parseInt(prompt("Introduce un número"))
+while(esprimo && num>divisor){
+	if(num%divisor==0){
+		esprimo=false;
+		document.write("No es primo")
+	} else {
+		document.write("Es primo")
+		esprimo=false;
+	}
+	divisor++;
+}
+*/
+</script>
+
+</body>
+</html>

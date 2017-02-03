@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1><center>Productos Alimentarios</center></h1>
+        <strong>
+        <script type="text/javascript">
+            function ProductoAlimentacion(codigo,nombre,precio){
+                this.codigo=codigo;
+                this.nombre=nombre;
+                this.precio=precio;
+            
+                this.getCodigo=function(){return this.codigo}
+                this.getNombre=function(){return this.nombre}
+                this.getPrecio=function(){return this.precio}
+                this.getDatos=function(){return this.imprimirDatos}
+                
+                this.setCodigo=function(v){this.codigo = v}
+                this.setNombre=function(v){this.nombre = v}
+                this.setPrecio=function(v){this.precio = v}
+                
+                this.imprimirDatos=function(){
+                    var cadena = "Codigo: "+this.getCodigo() 
+                    +"<br>" +"Nombre:" +this.getNombre() +"<br>" +"Precio" 
+                    +this.getPrecio() +"<br>" +"---------------------" +"<p>";
+                    return cadena;
+                }
+            }
+
+            
+            
+            var producto1=new ProductoAlimentacion(1,"Pan",0.40);
+            var producto2=new ProductoAlimentacion(2,"Pasta",6);
+            var producto3=new ProductoAlimentacion(3,"Galletas",3);
+
+            var productos=new Array(producto1,producto2,producto3);
+            
+            //console.log(producto1.imprimirDatos())
+            /*
+            for(var x=0;x<productos.length;x++){
+                document.write(productos[x].imprimirDatos())
+            }
+            */
+            
+            function imprimirDatos2(){
+                    var cadena = "Codigo: "+this.productos[x].getCodigo()
+                    +"<br>" +"Nombre:" +this.productos[x].getNombre() +"<br>" +"Precio" 
+                    +this.productos[x].getPrecio() +"<br>" +"---------------------" +"<p>";
+                    return cadena;
+            }
+            for(var x=0;x<productos.length;x++){
+            document.write(imprimirDatos2())
+            }
+        </script>
+        
+        
+        </strong>
+    </body>
+</html>

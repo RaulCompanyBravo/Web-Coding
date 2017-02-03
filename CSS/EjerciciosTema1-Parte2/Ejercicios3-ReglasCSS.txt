@@ -1,0 +1,5 @@
+{border-style: hidden;}
+#menu {border-style: solid; border-width: 1px; border-color:blue}
+#noticias {border-style: solid; border-width: 1px; border-color:#D8D8D8}
+#publicidad {border-style:dashed; border-width: 1px; border-color:#CC6600}
+#secundario {border-style: solid; border-width: 1px; border-color:#CC6600}

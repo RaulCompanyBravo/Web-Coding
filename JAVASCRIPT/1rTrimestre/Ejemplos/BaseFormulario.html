@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+     <meta charset="utf-8"> 
+    <head></head>
+               <style type="text/css"> /* Estilo de la pagina*/ 
+            div{ 
+                text-align:center;
+                background-color: #BDBDBD;
+                width:300px;
+                height:50px;
+                border:solid;
+            }
+                
+                
+            </style>
+    <body>
+        
+        
+        <script type="text/javascript">
+            function validar(){
+                var contenido=document.forms.in.valor.value;
+                if(contenido.length>=3 && contenido.length<=15){
+                    alert("OK")
+                } else {
+                    alert("mal")
+                }
+            }
+            function validarDNI(){
+                var contenido=document.forms.in.valor.value;
+                // var patronTelefono=new RegExp("^['+']{1}[0-9]{1,2}[' ']{1}[0-9]{9}$")
+                var patronDNI=new RegExp("^[0-5]{1}[0-9]{7}-[A-Z]{1}$")
+                if(patronDNI.test(contenido)){
+                    alert("OK")
+                } else {
+                    alert("mal")
+                }
+            }
+            function validar1(){
+                var contenido=document.forms.in.valor.value;
+                // var patronTelefono=new RegExp("^['+']{1}[0-9]{1,2}[' ']{1}[0-9]{9}$")
+                var patron=new RegExp("^[0-5]{1}[0-8]{1}.[0-9]{3}.[0-9]{3}.[A-Z]{1}$")//11.111.111.A
+                if(patron.test(contenido)){
+                    alert("OK")
+                } else {
+                    alert("mal")
+                }
+            }
+            function validar2(){
+                var contenido=document.forms.in.valor.value;
+                //var contenido =new RegExp("(http|ftp|https)")
+                var patron=new RegExp("^http|ftp|https{1}://$")//11.111.111.A
+                if(contenido.match(patron)==null){
+                    alert("mal")
+                } else {
+                    alert("ok")
+                }
+            }
+        </script>
+  
+      <div>  
+        <form name="in">
+            <label for="valor">Valor</label>
+            <input type="text" name="valor"/>
+            <input type="submit" onclick="validar2()" value="Enviar" />
+        </form> 
+       </div>
+        
+        
+    </body>
+</html>

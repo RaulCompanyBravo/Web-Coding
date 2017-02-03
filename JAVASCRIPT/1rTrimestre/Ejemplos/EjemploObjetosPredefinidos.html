@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+            /*
+                with(document){
+                    write("La altura es " +screen.height) //Muestra la altura total
+                    write("<br>")
+                    write("La anchura es " +screen.width) //Muestra la anchura total
+                    write("<br>")
+                    write("Disponible altura es " +screen.availHeight) //Muestra la altura disponible
+                    write("<br>")
+                    write("Disponible anchura es " +screen.availWidth) //Muestra la anchura disponible
+                    write("<br>")
+                    write("Profundidad de color es " +screen.colorDepth) //Muestra la profundidad de color
+                    write("<br>")
+                }
+                
+                var ventanaNueva=window.open();  //Muestra una ventana emergente
+                ventanaNueva.document.write("Hola, soy un contenido") //Define el contenido de la ventana
+                //window.open("http://www.marca.com") //Define el contenido de otra ventana
+                var ventanaNueva2=window.open("","","width=300,height=300") //Abre una ventana emerjente de la resolución elegida
+              */
+              
+              function openV(){ //Funcion para abrir una ventana emergente
+              with(document){
+                   ventanaE=window.open("Ventanas.html","","width=300,height=300") //Se habre en una pestaña
+                   //ventanaE.document.write("<button>dddd</button>")
+                   //ventanaE=window.open("http://www.marca.com","","width=300,height=300") //Se habre en una ventana mergente
+              }
+              }
+              
+              function closeV(){ //Funcion para cerrar una ventana emergente
+                  with(document){
+                  ventanaE.close() //Cierra la ventana emergente "ventanaE"
+                  }
+              }
+              
+            </script>
+             <button onclick="openV()">Abrir</button> 
+             <button onclick="closeV()">Cerrar</button> 
+        </body>
+    </head>
+</html>

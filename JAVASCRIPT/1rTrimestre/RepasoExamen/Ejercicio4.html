@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Strings</h1>
+        <script type="text/javascript">
+            var vCadena=prompt("Introduce el texto")
+            console.log(vCadena.toUpperCase())
+            
+            var cadenaM=[];
+            cadenaM=vCadena.split("");
+            console.log(cadenaM)
+            var cadenaM_Conv =[];
+            
+            
+            for(var i=0;i<vCadena.length;i++){
+                switch(cadenaM[i]){
+                    case "a":
+                    case "e":
+                    case "i":
+                    case "o":
+                    case "u":
+                        cadenaM_Conv[i]=cadenaM[i].toUpperCase();
+                        break;
+                    default: cadenaM_Conv[i]=cadenaM[i]
+                }
+            }
+            
+            console.log(cadenaM_Conv)
+            alert("Convertida: " +cadenaM_Conv.join(""))
+            
+            
+        </script>
+    </body>
+</html>

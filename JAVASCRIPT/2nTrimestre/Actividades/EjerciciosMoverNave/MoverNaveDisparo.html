@@ -1,0 +1,131 @@
+<html>
+    <head><script type="text/javascript">        
+
+            //document.onkeydown=function(){alert("Hola")};
+        
+        </script></head>
+    <style>
+#nave {position: absolute;}
+#boss {position: absolute;}
+#bala {position: absolute;}
+</style>
+    <body id="master" background="./img/estrellas.jpg">
+        <img src="./img/cohete.png" id="nave" style="left: 0px; top: 200px;" />
+        <img src="./img/monstruo.png" id="boss" style="left: 1000px; top: 60px;" />
+        <img src="./img/proyectil1.png" id="bala" style="display:none;left:0px;background-position:0px"></img>
+        <script type="text/javascript">
+        var max_bottom=window.innerWidth;
+        var max_rigth=window.innerHeight;
+        
+        var contenedor=  document.getElementById("master");
+        var contenedor_nave=  document.getElementById("nave");
+        var pos_Nave = contenedor_nave.style.top.substr(0,contenedor_nave.style.top.length-2)
+        
+        var contenedor_boss=  document.getElementById("boss");
+        var pos_boss = contenedor_boss.style.top.substr(0,contenedor_boss.style.top.length-2)
+        var mov_boss=0;
+    
+    window.onload=function(){document.onmousemove=moverNave;document.onmousedown=disparar;}
+    
+        function moverNave(event){
+
+            
+            var e = window.event || event;
+            var boss_pos;
+            //boss_pos=boss_pos+10;
+            //if(pos_Nave!=e.clientY){boss_pos = e.clientY;boss_pos+=10;contenedor_boss.style.top = boss_pos +'px'}else{console.log("ERROR-BOSS")}
+            if(pos_Nave!=e.clientY){contenedor_nave.style.top = e.clientY +'px'}
+            //console.log(contenedor_boss.style.top.)
+            //console.log(parseInt(contenedor.style.left.length))
+            //39 derecha 37 izquierda, 38 arriba, 40 abajo
+            /*
+            if(e.keyCode == 39){pos += 10;if(pos<0){pos=0};if(pos>max_rigth){pos=max_rigth};contenedor.style.left = pos +'px';}
+            else if(e.keyCode == 37){pos-=10;if(pos<0){pos=0};contenedor.style.left = pos +'px';}
+            else if(e.keyCode == 40){pos2 += 10;if(pos2<0){pos2=0};if(pos2>max_bottom){pos2=max_bottom};contenedor.style.top = pos2 +'px';}
+            else if(e.keyCode == 38){pos2 -= 10;if(pos2<0){pos2=0};if(pos2>max_bottom){pos2=max_bottom};contenedor.style.top = pos2 +'px';}
+            else if(e.keyCode == 32){contenedor.style.left='0px'; contenedor.style.top='0px'; pos = 0; pos2 = 0;}
+            */
+            //contenedor.style.left = parseInt(contenedor.style.left)+ 200 +'px';
+            //console.log(parseInt(contenedor.style.left.length))
+        }
+
+            //setInterval(function(){mov_boss+=25;contenedor_boss.style.top=mov_boss;},500); //setInterval(function(){ alert("Hello"); }, 3000);
+        
+            var contenedor_bala=document.getElementById("bala");
+            var mov_bala=0;
+            
+           /*
+            var pos_bala_cor = contenedor_bala.style.top.substr(0,contenedor_boss.style.top.length-2)
+            console.log("pso bala 2"+pos_bala_cor)
+           */
+            
+            
+            
+            var leftBoss2 = contenedor_boss.style.left.substr(0,contenedor_boss.style.left.length-2);
+                     console.log(leftBoss2)
+                     parseInt(leftBoss2,10)
+                     console.log(typeof(leftBoss2))
+                    console.log(leftBoss2+0)
+                    console.log(typeof(leftBoss2))
+                    
+                    
+        function disparar(){
+            var p_heightBoss;
+            var leftBala;
+            var leftBoss;
+            var topBala;
+            var topBoss;
+             mov_bala=0;
+             console.log(contenedor_bala.style.left)
+             //console.log(contenedor_bala.style.display)
+             contenedor_bala.style.top = contenedor_nave.style.top;
+             contenedor_bala.style.display = "inline";
+             
+             
+             
+             
+             if(contenedor_bala.style.left!="0px"){
+                 console.log("Se esta moviendo la bala")
+             } else {
+                 setInterval(function(){
+                    p_heightBoss = parseInt(contenedor_boss.style.top.substr(0,contenedor_boss.style.left.length-2)) + contenedor_boss.clientHeight; 
+                    var leftBala = contenedor_bala.style.left.substr(0,contenedor_bala.style.left.length-2);
+                    var leftBoss = contenedor_boss.style.left.substr(0,contenedor_boss.style.left.length-2);
+                    
+                    var topBala = contenedor_bala.style.top.substr(0,contenedor_bala.style.top.length-2);
+                    var topBoss = contenedor_boss.style.top.substr(0,contenedor_boss.style.top.length-2);
+                    
+                   //Number(leftBala);
+                    //console.log(typeof(leftBala))
+                    parseInt(leftBala)
+                    console.log("Suma" +leftBala+0)
+                    console.log(typeof(leftBala))
+                    
+                    Number(leftBoss);
+                    parseInt(topBala);
+                    parseInt(topBoss);
+
+                    
+                    
+                     console.log(
+                    "leftBala:"+ leftBala
+                     +" leftTop:"+ leftBoss
+                     +"topBala:" +topBala
+                     +"topBoss" +topBoss)
+                     mov_bala+=1;contenedor_bala.style.left=mov_bala;},0.5);
+                     if(topBala>topBoss){alert("dñkfah")}
+                    
+             }//img.clientWidth && contenedor_bala.style.top.substr(0,contenedor_bala.style.top.length-2)<p_heightBoss
+             
+             
+             
+             
+        }
+    
+
+
+
+        </script>
+        
+    </body>
+</html>

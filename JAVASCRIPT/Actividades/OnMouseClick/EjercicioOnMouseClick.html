@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style type="text/css">
+          .empate {background:yellow;color: black;}
+          .gana{background:#00FFFF;color:blue;}
+          .pierde{background:red;color:white}
+          .fuente{font-size: 100%}
+      </style>
+      <body>
+          
+ 
+    <script type="text/javascript">
+        
+        var vservidor=Math.random().toFixed(2); //El valor para determinar la jugada del rival
+        var vservidorjug; //Jugada del rival
+        var vusuario=prompt("Introduce tu jugada");
+        
+        //if para determinar la jugada del rival    
+        if(vservidor<=0.33){
+            vservidorjug="piedra";
+        } else {
+            if (vservidor>=0.66){
+                vservidorjug="tijera"
+            } else {
+                vservidorjug="papel"
+            }
+        }
+        
+        //Muestra la jugada del rival y la tuya
+        
+        
+        document.write("<strong>Eleccion del usuario:" +vusuario +"</strong>");
+        document.write("<br>")
+        document.write("<strong>Eleccion del ordenador: "+vservidorjug +"</strong>");
+        
+        //vservidorjug="papel";
+        //vusuario="piedra";
+        
+        //switch para saber quien ha ganado o perdido
+        //si gana el rivar el fondo es rojo, si ganas tu el fonde sera verde, pero si empatais sera amarillo
+        switch(vservidorjug){
+            case vservidorjug=vusuario:
+                document.write("<h1 class='empate'>Empate!!</h1>");
+                break;
+            case vservidor="papel":
+               if(vusuario=="tijera"){
+                  document.write("<h1 class='gana'>Ganas el usuario con las tijeras</h1>");
+               } else {
+                   document.write("<h1 class='pierde'>Gana el ordenador con el papel</h1>");
+                  
+               }
+                break;
+            case vservidor="tijera":
+               if(vusuario=="piedra"){
+                   document.write("<h1 class='gana'>Gana el usuario con la piedra</h1>");
+                   
+                } else {
+                   document.write("<h1 class='pierde'>Gana el ordenador con ls tijeras</h1>");
+                   
+               }
+                break;
+             case vservidor="piedra":
+               if(vusuario=="papel"){
+                   document.write("<h1 class='gana'>Gana el usuario con el papel</h1>");
+                  
+               } else {
+                   document.write("<h1 class='pierde'>Gana el ordenador con la piedra</h1>");
+               }
+        
+                break;
+        }
+    </script>
+         </body>
+  </head>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>EXPRESIONES REGULARES</h1>
+        <script type="text/javascript">
+            var vMovil=prompt("Introduce el tu movil");
+            var patronMovil=new RegExp("^[0-9]{9}$");
+            if(patronMovil.test(vMovil)){
+                alert("Movil CORRECTO")
+            } else {
+                alert("Movil INCORRECTO")
+            }
+        </script>
+    </body>
+</html>

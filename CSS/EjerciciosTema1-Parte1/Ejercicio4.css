@@ -1,0 +1,18 @@
+/* Vuelva a escribir cada uno de estos ejemplos de CSS . Algunos
+de ellos son completamente incorrectos y algunos se podr´ıan escribir de manera
+m´as eficiente. */
+
+
+/*1*/ 
+p {font-face: sans-serif; font-size: 1em; line-height: 1.2em;}
+/*2*/ 
+blockquote {font-size:1em;line-height: 150%;color: gray }
+
+/*3*/ 
+body {background-color: black; color: #666; margin-left: 12em; margin-right: 12em;}
+
+/*4*/ 
+p ,blockquote, li {color: white;}
+
+/*5*/ 
+<strong style="color:red">Act now!</strong>

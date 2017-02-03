@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript"> //Calculadora: introduce un número y un operador
+var rep="si";
+do{ 	//Bucle con do while
+var res;
+var num=prompt("Introduce el primer número");
+var op=prompt("Introduce un operador");
+var num2=prompt("Introduce el segundo número");
+	switch(op){
+		case "+": res=parseInt(num)+parseInt(num2) //Operacion suma
+					break;
+		case "-": res=parseInt(num)-parseInt(num2) //Operacion resta
+					break;
+		case "*": res=parseInt(num)*parseInt(num2) //Operacion multiplicacion
+					break;
+		case "/":  res=parseInt(num)/parseInt(num2) //Operacion division
+					break;
+	}
+	alert("El resultado es" +" "+res); //Muetra el resultado en un alert
+	rep=prompt("Desea realizar otra operación? si o no") //Pregunta si quiere hacer otra operacion
+} while(rep!="no")
+</script>
+</body>
+</html>

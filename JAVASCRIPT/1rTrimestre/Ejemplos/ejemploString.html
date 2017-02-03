@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejemplo de uso de Strings</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Juan Mateu">
+</head>
+<body>
+<h1> Utilización de cadenas en JavaScript </h1>
+<script type="text/javascript">
+    //creamos un objeto de tipo String usando el operador new
+    var ciudad=new String("Valencia");
+
+    /*podemos usar funciones como toLowerCase() para pasar la cadena a minúsculas*/
+    document.write(ciudad.toLowerCase() + "<br>");
+
+    //podemos usar el método toUpperCase() para pasar la cadena a mayúsculas
+    document.write(ciudad.toUpperCase() + "<br>");
+
+    //concatenación de cadenas (Strings)
+    var cadena1="Hola ";
+    var cadena2= "a todos!!";
+    var cadena3=cadena1+cadena2;
+    document.write(cadena3 + "<br>");
+
+    //otra concatenación habitual de cadenas usando el operador +=
+    var cadena4="curso JavaScript";
+    cadena4+=" y de jQuery <br>";
+    document.write(cadena4);
+
+    //podemos concatenar múltiples cadenas usando el método concat
+    var cadena5= " ".concat("Hola ", " a ", "todos!!","<br>");
+    document.write(cadena5);
+
+    //concatenación de una cadena (String) con otro tipo de datos
+    //en este caso se concatena una cadena con un valor decimal.
+    var numero=24.75;
+    var total= "El total calculado es: " + numero;
+    document.write(total + "<br>");
+
+    //comparación de cadenas
+    //usaremos habitualmente el operador de comparación ==
+    var nombre=prompt("Dime tu nombre");
+    /*comparamos con una cadena, pero dicha cadena puede estar en mayúsculas o minúsculas.*/
+    if(nombre=="Juan"){
+    	alert("Tu nombre es Juan. Bienvenido!!");
+    }else{
+    	alert("Tu no eres Juan");
+    }
+    //mejor utilizar las funciones toUpperCase() o toLowerCase().
+    if(nombre.toUpperCase() == "JUAN"){
+    	alert("Tu nombre es Juan. Bienvenido");
+    }else{
+    	alert("Tu no eres Juan");
+    }
+
+    //hay que ir con cuidad con las conversiones de tipo
+    var numero2=10.00;
+    if(numero2 == "10"){
+    	alert("El número es 10");
+    }
+
+    /* en ocasiones puede ser preferible comparar tanto el valor como el tipo de datos. Para ello usaremos el operador === (estrictamente igual)*/
+    
+    //esto es un objeto de tipo String. Los objetos los creamos con el new
+    var objetoString=new String("Juan");
+
+    //esto NO es un objeto de tipo String. Es un literal de tipo String.
+    var literalString="Juan";
+    
+    //comparando con el == , ambas cadenas contienen el mismo valor
+    if(objetoString == literalString){
+    	alert("Son iguales");
+    }else{
+    	alert("No son iguales");
+    }
+
+    /*ahora volvemos a realizar el mismo ejemplo anterior pero comparando con el === 
+    con el operador estrictamente igual, se compara el valor y el tipo de datos. En este caso un tipo de datos es un objeto y el otro es un literal
+    */
+    if(objetoString === literalString){
+    	 alert("Son iguales");
+    }else{
+    	alert("No son iguales");
+    }
+
+    /*para comparar que dos cadenas NO son iguales (distinto), usaremos el operador !=  */
+    if(objetoString!=literalString){
+    	alert("No son iguales");
+    }else{
+    	alert("Son iguales");
+    }
+
+    /* también tenemos la misma opción para el operador estrictamente igual, en este caso sería !==  */
+    if(objetoString !== literalString){
+    	alert("No tienen el mismo valor y el mismo tipo de datos");
+    }else{
+    	alert("Son iguales en valor y tipo de datos");
+    }
+
+    //comparación de cadenas
+    var cadena6="perro";
+    var cadena7="gato";
+    //gato es lexicalmente menor que perro (orden alfabético)
+    if(cadena6 > cadena7){
+    	document.write("Perro es mayor que gato <br>");
+    }else{
+    	document.write("Gato es mayor que perro <br>");
+    }
+
+    //comparación de cadenas (mayúsculas y minúsculas)
+    var cadena8="Perro";
+    var cadena9="perro";
+     /* en la tabla de códigos ASCII, primero están las mayúsculas y después las minúsculas, por lo que las minúsculas son mayores en la comparación 
+     Por ejemplo: P tiene el valor 80 y p (minúscula) tiene el valor 112
+     */
+     if(cadena8 > cadena9){
+     	document.write("Perro es mayor que perro <br>");
+     }else{
+     	document.write("perro es mayor que Perro <br>");
+     }
+    
+     //método localeCompare() compara dos cadenas y devuelve un 0 si las cadenas son iguales, -1 si el parámetro pasado es mayor y devuelve 1 si el valor que pasamos como parámetro es menor.
+     var fruta1="manzana";
+     var fruta2="pera";
+     var indice=fruta1.localeCompare(fruta2);
+     document.write(indice + "<br>"); //el resultado será -1
+      //como podemos observar, dependerá del parámetro que le pasemos
+      indice=fruta2.localeCompare(fruta1);
+     document.write(indice + "<br>"); //el resultado será 1
+  
+    /****************/
+     //encontrando una subcadena en un String
+
+     /*podemos usar indexOf para mostrar la posición de la subcadena (si existe)*/
+    var cadena10 = "Estoy aprendiendo JavaScript";
+    var subcadena10 = "JavaScript";
+
+    //la posición mostrada será la 18 (empezando por la posición 0)
+    document.write("Encontrado la posición de la subcadena " + cadena10.indexOf(subcadena10) + "<br>"); 
+    var subcadena = "hola";
+
+    //en este caso devuelve -1 porque la subcadena no ha sido encontrada
+    document.write("Encontrada la subcadena en la posición: " + cadena10.indexOf(subcadena) + "<br>"); 
+
+    /* podemos utilizar el método indexOf indicando una posición de donde empezar */
+    var cadena11="Este ordenador es mi ordenador";
+    //mostraremos el índice la última ocurrencia de dicha subcadena
+    document.write("Posición: " + cadena11.indexOf("ordenador",14) + "<br/>");
+   
+   /*podemos utilizar le método lastIndexOf() para ver la última ocurrencia de una determina subcadena */
+   var cadena12 = "Este ordenador es mi ordenador".lastIndexOf("ordenador");
+   document.write("Posición: " + cadena12 + "<br>");
+
+   /* para el lastIndexOf le podemos indicar una posición a partir de donde debe empezar a buscar */
+   var cadena13 = "Esta manzana es mi manzana".lastIndexOf("manzana",13);
+   document.write("Posición:  " + cadena13 + "<br>"); //mostrará la posición 5 
+   
+   //otro ejemplo similar al anterior
+    var cadena14 = "Esta manzana es mi manzana".lastIndexOf("manzana",23);
+   document.write("Posición:  " + cadena14 + "<br>"); //mostrará la posición 19 
+
+   //otro ejemplo de lastIndexOf
+     var cadena15 = "Esta manzana es mi manzana, mi manzanas de cada dia".lastIndexOf("manzana",23);
+   document.write("Posición:  " + cadena15 + "<br>"); //mostrará la posición 19 
+
+   //otro ejemplo de lastIndexOf
+   var cadena16 = "Esta manzana es mi manzana, mi manzanas de cada dia".lastIndexOf("manzana",4);
+     //con solo 4 caracteres no puede detectar la aparición de manzana
+   document.write("Posición:  " + cadena16 + "<br>"); //mostrará la posición -1
+   
+   /********************/
+  //vamos a extraer subcadenas de cadenas
+  var frase="Esta es una lista de elementos: manzanas,peras,platanos,naranjas.";
+  //preparamos el índice para coger los elementos del listado
+  var empezar=frase.indexOf(":");
+  var fin = frase.indexOf(".",empezar+1);
+  //con el método substring podemos escoger que parte de la cadena escoger 
+  var lista=frase.substring(empezar+1,fin);
+  document.write(lista + "<br>");
+
+  //ahora vamos a quitar las comas con el método split:
+  //si nos fijamos, se almacenarán los elementos por separado en un vector
+  var frutas=lista.split(",");
+  document.write("Primer elemento del vector" + frutas[0] + "<br>");
+  document.write("Segundo elemento del vector:" +frutas[1] + "<br>");
+  /*el length nos permite obtener la longitud (o tamaño) de un vector o de una cadena.
+  Realizamos el recorrido de los elementos almacenados en un vector gracias al método split*/
+  for(var i=0;i<frutas.length;i++){
+     document.write(frutas[i] + "<br>");
+  }
+
+  //tamaño o longitud de una cadena con la propiedad .length
+   document.write("Longitud de la cadena Pepe: " + "Pepe".length + " caracteres "+ "<br>");
+
+   /*para realizar las comprobaciones de los tipos de datos en JavaScript, usaremos el operador typeof .
+    El operador typeof devolverá si es un número, un string, un booleano, una función, un objeto o si la variable es indefinida
+   */
+
+   var variable;
+   document.write(typeof(variable) + "<br>");/*el resultado es indefinido (desconocemos el tipo de datos que contiene dicha variable ya que no está inicializada)*/
+
+   var esPrimo=true;
+   document.write(typeof(esPrimo) + "<br>"); //la variable es booleana
+
+   var cadena17="Hola";
+   document.write(typeof(cadena17) + "<br>"); //la variable es de tipo string (cadena)
+
+   var numero3=14.23;
+   document.write(typeof(numero3) + "<br>"); //la variable es de tipo numérico
+
+   var cadenaString=new String("Hola de nuevo");
+   document.write(typeof(cadenaString) + "<br>");//devuelve un objeto ya que hemos creado un string utilizando new
+
+   //uso del método substring
+   /*este método le indicamos en que posición empieza y en que posición acaba la subcadena que queremos obtener. */
+   var cadena28="hola a todos de nuevo";
+   document.write(cadena28.substring(0,12) + "<br>");
+
+   //uso del método substr (no es el mismo que substring)
+   /*indicamos la posición donde empieza y el siguiente parámetro indica la cantidad de caracteres a coger. En el ejemplo empezamos por la posición 0 y cogeremos 4 caracteres de longitud */
+   document.write(cadena28.substr(0,4) + "<br>"); //mostrará la subcadena hola
+
+   //la función trim quita los espacios iniciales y finales de la cadena
+   var cadenaEspaciada="    hola a todos   ";
+   document.write("La cadena tiene la longitud: " + cadenaEspaciada.length + "<br>");
+   //recuerda, trim solo elimina los espacios del inicio y del final (NO elimina espacios intermedios)
+   document.write("La cadena sin espacios al inicio y al final tiene la longitud: " + cadenaEspaciada.trim().length + "<br>");
+
+   //recorrido de una cadena
+   var cadena29="esto es una cadena";
+   for(var i=0;i<cadena29.length;i++){
+    //el método charAt nos devuelve un determinado carácter según la posición que le indiquemos.
+      document.write(cadena29.charAt(i) + "  ");
+   }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+                /*
+                var objeto={a:1,b:2,c:3} 
+                for(var o in objeto){ 
+                    console.log(o + " " +objeto[o]) //Muestra los dos valores
+                    console.log(objeto[o]) //Muestra solo el valor de la izquierda
+                }
+                */
+                var miObjeto={
+                    miNombre:"Raul",
+                    miEdad:19
+                }
+                /*
+                console.log(miObjeto.miNombre);
+                console.log(miObjeto.miEdad);
+                miObjeto.miNombre="Maria";
+                miObjeto.miEdad=79;
+                console.log(miObjeto.miNombre);
+                console.log(miObjeto.miEdad);
+                miObjeto.miEmpleo="Programador JavaScript";
+                console.log(miObjeto.miEmpleo);
+                */
+                var miObjeto2={
+                miNombre:"Laura",
+                miEdad:18,
+                getNombre:function(){alert("El nombre es " +miObjeto2.miNombre)},
+                getEdad:function(){alert("La edad es " +miObjeto2.miEdad)},
+                getEmpleo:function(){alert("El empleo es " +miObjeto2.miEmpleo)},
+                
+                setNombre:function(v){miObjeto2.miNombre=v},
+                setEdad:function(v){miObjeto2.miNombre=v},
+                setEmpleo:function(v){miObjeto2.miEmpleo=v},
+               //miObjeto2.miEmpleo="Programadora JavaScript"
+                /*
+                console.log(miObjeto2.miNombre);
+                console.log(miObjeto2.miEdad);
+                console.log(miObjeto2.miEmpleo);
+                */
+                toString(){
+                var cadena;
+                cadena = "El nombre es " +miObjeto2.miNombre +" y su edad es " +miObjeto2.miEdad;
+                return console.log(cadena);
+                }
+                //miObjeto2.getNombre();
+                //miObjeto2.setNombre("Pene");
+                //console.log(miObjeto2.miNombre);
+                }
+                //miObjeto2.toString();
+                
+                var miObjeto3={
+                    nombre:"Pepe",
+                    edad:38,
+                    moto:{modelo:"Suzuki",ano:1986
+                    },
+                    getNombre:function(){alert("Su nombre es:" +miObjeto3.nombre)},
+                    getEdad:function(){alert("Su edad es:" +miObjeto3.edad)},
+                    getMotoModelo:function(){alert("Su modelo de moto es:" +miObjeto3.moto.modelo)},
+                    getFrechaMoto:function(){alert("Su año de moto es:" +miObjeto3.moto.ano)}
+                }
+                miObjeto3.getNombre();
+                var miObjeto4=Object.create(miObjeto3);
+                console.log(miObjeto4.edad);
+                
+                miObjeto.miEdad=function(){alert(this.miEdad)};
+                miObjeto3.getEdad();
+                </script>
+        </body>
+    </head>
+</html>

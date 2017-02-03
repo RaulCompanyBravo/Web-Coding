@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <body> 
+    <head>
+       <meta charset="UTF-8">
+    </head>
+        <script type="text/javascript">
+            //Con objetos Crear 4 objetos
+            var coche={
+                    marca:"2",
+                    modelo:"2",
+                    fabricacion:1,
+                    
+                getMarca:function(){return this.marca},
+                getModelo:function(){return this.modelo},
+                getFabric:function(){return this.fabricacion},
+                
+                setMarca:function(v){this.marca=v},
+                setModelo:function(v){this.modelo=v},
+                setFabric:function(v){this.fabricacion=v},
+                
+                toStringTable:function(v){
+                    document.write('<tr>')
+                        document.write('<td>'+coches[v].marca+'</td>' 
+                        +'<td>'+coches[v].modelo+'</td>' 
+                        +'<td>'+coches[v].fabricacion+'</td>');
+                    document.write('</tr>')
+                }
+                
+            }
+               
+//var miObjeto4=Object.create(miObjeto3
+            var coche1=Object.create(coche);
+                coche1.setMarca("Ferrari");
+                coche1.setModelo("F1");
+                coche1.setFabric(1988)
+            
+            var coche2=Object.create(coche);
+                coche2.setMarca("Mercedes");
+                coche2.setModelo("RM3");
+                coche2.setFabric(2001);
+                
+            var coche3=Object.create(coche);
+                coche3.setMarca("Renault");
+                coche3.setModelo("Family3");
+                coche3.setFabric(2006);  
+                
+            var coche4=Object.create(coche);
+                coche4.setMarca("lamborghini");
+                coche4.setModelo("Murcielago");
+                coche4.setFabric(2005);    
+            var coches=new Array(coche1,coche2,coche3,coche4);
+        </script>
+        
+        <center>
+        <h1>Listado de coches (Objetos)</h1>
+        <script type="text/javascript">
+        document.write('<table border=1>')
+           // for(var g=0;g<2;g++){
+           document.write('<tr>' 
+                +'<th>' +"Marca"  +'</th>'
+                +'<th>' +"Modelo" +'</th>'
+                +'<th>' +"Año"    +'</th>'
+           +'</tr>');
+            document.write('<tr>');
+                    for (var x=0;x<coches.length;x++){
+                        coche.toStringTable(x)
+                    }
+            document.write('<tr>');
+            //}
+        document.write('</table>')
+            
+            
+        </script>
+        
+        
+        
+        <script type="text/javascript">
+            function Coche(marca,modelo,fecha_fabric,num_Plantas){
+                this.marca=marca;
+                this.modelo=modelo;
+                this.fecha_fabric=fecha_fabric;
+                    //Metodo GET
+                this.getMarca=function(){return this.marca}
+                this.getModelo=function(){return this.modelo}
+                this.getFabric=function(){return this.fecha_fabric}
+                
+
+                this.setMarca=function(v){this.marca=v}
+                this.setModelo=function(v){this.modelo=v}
+                this.setFabric=function(v){this.fecha_fabric=v}
+            
+                var coches_=new Array(coche1,coche2,coche3);
+                toString=function(v){
+                    document.write('<tr>')
+                    for(var g=0;g<2;g++){
+                        document.write('<td>' +coches_[v].getMarca()+'</td>' 
+                        +'<td>' +coches_[v].getModelo() +'</td>' 
+                        +'<td>'  +coches_[v].getFabric()+'</td>');
+                    }
+                    document.write('</tr>')
+                }
+                
+            }
+            var coche1=new Coche("Alfa Romeo","Giulietta",1876);
+            var coche2=new Coche("Audi","RS8",2011);
+            var coche3=new Coche("Rolls Royce","Phantom",1995);
+
+            
+        </script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </center>
+    </body>
+</html>

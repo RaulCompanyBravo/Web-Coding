@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>EXPRESIONES REGULARES</h1>
+        <script type="text/javascript">
+            var vDNI=prompt("Introduce el DNI");
+            var patronDNI=new RegExp("^[1-5]{1}[1-9]{7}-[A-Z]{1}$"); //12223334-S
+            if(patronDNI.test(vDNI)){
+                alert("DNI CORRECTO")
+            } else {
+                alert("DNI INCORRECTO")
+            }
+        </script>
+    </body>
+</html>

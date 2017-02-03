@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+                
+            function abrirLink(){ //Funcion para abrir una ventana emergente
+                  var url=document.form.url.value;
+                  url = "http://"+url
+                  var ventanaLink=window.open(url,"","") //Se habre en una pestaña
+              }
+            </script>
+            <h1>Introduce una url</h1>
+            <form name="form">
+                <input type="text" name="url">  </input>
+                <input type="button" name="boton" onclick="abrirLink()" value="Abrir"></input>
+            </form name="pagina">
+          
+        </body>
+    </head>
+    
+</html>

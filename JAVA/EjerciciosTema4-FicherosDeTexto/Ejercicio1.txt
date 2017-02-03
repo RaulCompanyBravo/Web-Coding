@@ -1,0 +1,1 @@
+Indica si es posible leer una palabra que se interprete como un double

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            function Persona(nombre,edad,dni){
+                this.nombre=nombre;
+                this.edad=edad;
+                this.dni=dni;
+                    //Metodos get
+                this.getNombre=function(){return this.nombre};
+                this.getEdad=function(){return this.edad};
+                this.getDNI=function(){return this.dni};
+                    //Metodos set
+                this.setNombre=function(v){this.nombre = v};
+                this.setEdad=function(v){this.edad = v};
+                this.setDNI=function(v){this.dni = v};
+                
+                this.toString=function(){
+                    var cadena ="";
+                    cadena = "Su nombre es " +this.getNombre() +", su edad es " +this.getEdad() +" y su DNI es " +this.getDNI();
+                    return alert(cadena);
+                }
+
+            }
+                //Crear una persona
+            var persona=new Persona("Raul",19,"12345678Z");
+            persona.toString();
+            
+            Persona.prototype.setEdad=function(vEdad){this.edad=vEdad}
+            
+            var persona=new Persona("Carlos",45,"87654321A");
+            console.log(persona.toString());
+        </script>
+    </body>
+</html>

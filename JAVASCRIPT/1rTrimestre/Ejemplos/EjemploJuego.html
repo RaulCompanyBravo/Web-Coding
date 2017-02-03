@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var n=prompt("Elije")
+	var c;
+	v=Math.random();
+	document.write(v.toFixed(2));
+	
+	if (v<=0.33){
+			//document.write("Piedra")
+			c="piedra"
+				
+	} else {
+		if (v>=0.66){
+			//document.write("Papelk")
+			c="papel"
+		} else {
+			//document.write("Tijeras")
+			c="tijera"
+		}
+	document.write(c);
+
+		if(c==n){
+			document.write("Empate")
+				} else {
+					
+					if (c=="piedra"){
+						switch (c){
+							//case c==n: document.write("Empate");
+							case n=="tijera": document.write("Pierdes");
+							case n=="papel": document.write("Ganas");
+							break;
+						}
+					}
+
+					if (c=="papel"){
+						switch (c){
+							//case c==n: document.write("Empate");
+							case n=="piedra": document.write("Pierdes");
+							case n=="tijera": document.write("Ganas");
+							break;
+						}
+					}
+
+					if (c=="tijera"){
+						switch (c){
+							//case c==n: document.write("Empate");
+							case n=="papel": document.write("Pierdes");
+							case n=="piedra": document.write("Ganas");
+							break;
+						}
+					}
+
+				}
+		
+	}
+</script>
+
+</body>
+</html>
+

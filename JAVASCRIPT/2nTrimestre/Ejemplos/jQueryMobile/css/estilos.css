@@ -1,0 +1,9 @@
+div[data-role="content"]{
+	text-align:center;
+}
+div[data-role="footer"]{
+	text-align:center;
+}
+div[data-role="header"]{
+	text-align:center;
+}

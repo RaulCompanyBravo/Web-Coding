@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title></title>
+    </head>
+        <body>
+            <script type="text/javascript">
+            var esprimo=true;
+            var divisor=2;
+            var num=parseInt(prompt("Introduce un número"))
+            while(esprimo && num>divisor){ //IF para determinar i es primo o no
+            	if(num%divisor==0){
+            		esprimo=false;
+            		document.write("No es primo")
+            	} else {
+            		document.write("Es primo")
+            		esprimo=false;
+            	}
+            	divisor++;
+            }
+            </script>
+
+        </body>
+</html>

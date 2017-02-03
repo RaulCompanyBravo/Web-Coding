@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        
+        var cadena1="hola";
+        var cadena2= new String("hola");
+        
+        if(cadena1===cadena2){ //Tambien compara que sea el mismo tipo
+        }
+        
+        var v1="perro";
+        //var v2="pera";
+        var v2="pera";
+        
+        if(v1>v2){ // Ordena por orden alfabetico, solo utiliza la primera letra, si son iguales pasa al 
+            console.log("El perro es mayor")
+        }
+        console.log(v1.localeCompare(v2)); //Devuelve 1 porque la primera variable es mas grande, y cero que son iguales
+        
+        
+        var texto="hola a todos los alumnos de DAW, alumnos";
+        var subcadena="alumnos";
+        var valor=texto.indexOf(subcadena,18);
+        var valor2=texto.lastIndexOf(subcadena);
+        console.log(valor2)
+        
+        var cadena3="Modulos : DWEC, DWES, PRG,DBA.";
+        var inicio=cadena3.indexOf(":");
+        var final=cadena3.indexOf(".")
+        var valor3=cadena3.substring(inicio+1, final);
+        console.log(valor3);
+        
+        var listadoFinal=valor3.split(",");
+        for(var u=0;u <listadoFinal.length;u++){
+             console.log(listadoFinal[u]);
+        }
+        
+        var texto2=" Pepe  ";
+        console.log(texto2.trim().length); //.trim() Elimina los espacios delante y detras, pero no los del medio
+        console.log(texto2.trim().charAt(0))
+        
+        
+        
+    </script>
+</html>

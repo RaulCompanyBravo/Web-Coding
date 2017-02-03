@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	
+	var a=['lunes ','martes ','miercoles '];
+	var b=[];
+	for (var i = 0; i < a.length ; i++) {
+		//document.write(a[i]);
+		//b=[a[i]])
+		b[i]=a[i];
+		document.write(b[i])
+	};
+	document.write("<br>")
+	document.write("--------------------------------------------------------------")
+	document.write("<br>")
+	var c=['1','2','3'];
+	var d=['8','2','3'];
+	var ig=0;
+	for (var i = 0; i < c.length ; i++) { //For para comparar vectores, si son iguales suma a la variable ig un valor
+		if (c[i]==d[i]){
+			ig++;
+		}
+	};
+	if(ig==c.length){
+			document.write("Son iguales")
+		} else {
+			document.write("Son diferentes")
+		}
+	document.write("<br>")
+	document.write("--------------------------------------------------------------")
+	document.write("<br>")
+	//Calcular exponente.
+	var num=0;
+
+	num=parseInt(prompt("Introduce un número"));
+	exp=parseInt(prompt("Introduce el exponentes"));
+	var potencia=1;
+
+	for (var i = 1; i<=exp; i++) {
+		potencia*=num;
+	};
+		alert("La potencia es " +potencia)
+
+	document.write("<br>")
+	document.write("--------------------------------------------------------------")
+//----------------------------------------------------------------------Factorial 3=1*2*3
+	var fnum=parseInt(prompt("Introduce un número"));
+	function numy(){
+		for (var i = 1; i = fnum; i++) {
+			var fres= fres*i;
+			document.write(fres);
+		};
+}
+	document.write("<br>")
+	document.write("--------------------------------------------------------------")
+//----------------------------------------------------------------------
+	var vector2=new Array["elemento1","elemento2",3,true]
+	
+	console.time("vectorLiteral")
+		var vector1=["elemento",4,false,undefined];
+	console.timeEnd("vectorLiteral")
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+     <meta charset="utf-8"> 
+    <head></head>
+               <style type="text/css"> /* Estilo de la pagina*/ 
+            div{ 
+                text-align:center;
+                background-color: #BDBDBD;
+                width:600px;
+                height:200px;
+                border:solid;
+            }
+                
+                
+            </style>
+    <body>
+        
+        
+        <script type="text/javascript">
+             var array=new Array();
+            function anyadirValor(){
+               
+                var n=document.in.nombre.value;
+                v1 = n;
+                 array.push(v1)
+                 console.log(array);
+                var cajaDiv=document.getElementById("contenido");
+                  cajaDiv.innerHTML="<strong>INTRODUCE DATOS</strong><br>";
+                cajaDiv.innerHTML+=v1;
+            }
+            
+            
+        </script>
+
+       <div id="contenido">
+          
+        </div>
+        
+         
+        <script type="text/javascript">
+              var cajaDiv=document.getElementById("contenido");
+              var cajaForm=document.forms.form.nombre.value;
+                 cajaDiv.innerHTML="<strong>INTRODUCE DATOS</strong><br>";
+                 cajaDiv.innerHTML+=value;
+
+        </script>
+        
+        <form name="in" id="form">
+            <input type="text" name="nombre"/>
+            <input type="button" onclick="anyadirValor()" value="añadir"/>
+        </form> 
+       
+        
+        
+    </body>
+</html>

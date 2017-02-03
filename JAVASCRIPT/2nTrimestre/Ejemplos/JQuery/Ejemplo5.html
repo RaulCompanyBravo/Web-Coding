@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+     <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <style type="text/css">
+            .rojo{color:red;}
+            .verde{color:green;}
+            .azul{color:blue;}
+            .amarillo{color:yellow;}
+            .clase1{border-top-style:double;}
+            .parrafo6{color:purple;}
+            .clase3{font-size:40px;}
+        </style>
+    <body>
+        <script type="text/javascript">
+            //Cambiar a amarillo todos los <p> que tenga un atributo class
+                $(document).ready(function(){$("p[class]").css("background-color","yellow")});
+            //Todos los parrafos con el id "parrafoP" en verde oscuro
+                $(document).ready(function(){$("p[id=parrafoP]").css("background-color","darkgreen")});
+            //
+                $(document).ready(function(){$("p[id^=par]").css("font-weight","bold").css("font-family","verdana")});
+            //Todos los parrafos que no tengan la class "clase1"
+                $(document).ready(function(){$("p[class!=clase1]").css("border-style","dotted")})
+            //Selectionar parrafos con id que contenga "afo"
+                $(document).ready(function(){$("p[id*=afo]").animate({opacity:0.25,width:"200px"},5000)})
+            //Parrafos que empiezen por "Par" y que t
+                $(document).ready(function(){$("p[class^=par][align=center]").css("text-transform","uppercase")})
+            //Parrafos que class acabe en "1"
+                 $(document).ready(function(){$("p[class$=1]").hide()});
+            //
+                $(document).ready(function(){$(":header").css("color","darkred")});
+            //Parrafos pf3, encabezados h2 y p con align center
+                $(document).ready(function(){
+                    $("h2,#pf3,p[align=center]").click(function(){alert("MEC CLICK")})
+            //
+                $(document).ready(function(){$("h1[id=cab1]").addClass("azul")});
+            //Sleccionar segundo p hijo de un div
+                $("div p:nth-child(2)").addClass("azul")
+                
+                });
+        </script>
+        
+        <div>
+                <p class="azul" id="p1">Parrafo 1</p>
+                <p class="verde">Parrafo 2</p>
+                <p id ="parrafoP">Parrafo 3</p>
+                <p class="clase1">Parrafo 4</p>
+                <p class="azul">Parrafo 5</p>
+                <p class="parrafo6" align="center" id="pf1">Parrafo 6</p>
+                
+                <br />
+                <h1 id="cab1"><b><i>Cabecera 1</i></b></h1>
+                <h2>Cabecera 2</h2>
+                <h3 id="pf3">Cabecera 3</h3>
+        </div>
+ 
+        
+    </body>
+</html>

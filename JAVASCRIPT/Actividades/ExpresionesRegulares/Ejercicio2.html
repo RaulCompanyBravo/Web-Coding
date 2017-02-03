@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+                /* Ejemplo
+                var patron=new RegExp("^[0-5]{3}[6-9]{2}$")
+                
+                if(patron.test("12377")){
+                    document.write("Bien")
+                } else {
+                    document.write("Mal")
+                }
+                */
+                var patroncodPostal=new RegExp("^[1-9]{5}$")
+                var codPostal=prompt("Introduce el codigo postal")
+                if(patroncodPostal.test(codPostal)){
+                    alert("Codigo postal correcto")
+                } else {
+                    alert("Codigo Postal incorrecto")
+                }
+                
+                var patronTelefono=new RegExp("^['+']{1}[0-9]{1,2}[' ']{1}[0-9]{9}$")
+                var telefonoExt=prompt("Introduce el telefono internacional")
+                if(patronTelefono.test(telefonoExt)){
+                    alert("Telefono internacional correcto")
+                } else {
+                    alert("Telefono internacional incorrecto")
+                }
+                
+                var patronFecha=new RegExp("^[1-31]{1,2}['/']{1}$")
+                var fecha=prompt("Introduce una fecha en formato dd/mm/aaaa")
+                if(patronFecha.test(fecha)){
+                    alert("Telefono internacional correcto")
+                } else {
+                    alert("Telefono internacional incorrecto")
+                }
+        
+                
+                
+                
+                
+                
+                
+                
+                
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head><script type="text/javascript">        
+
+            //document.onkeydown=function(){alert("Hola")};
+        
+        </script></head>
+    <style>
+#coche {
+    position: absolute;
+}
+</style>
+    <body id="1" ><img src="coche.jpg" id="coche" style="left: 0px; top: 0px;" />
+
+        <script type="text/javascript">
+        var max_bottom=window.innerWidth;
+        var max_rigth=window.innerHeight;
+        console.log(max_bottom)
+        //var	imagenCoche=document.getElementById("coche"); imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    window.onload=function(){
+            document.onkeydown=moverCoche;
+        
+    }
+       var pos = 0;
+       var pos2 = 0;
+        function moverCoche(event){
+            var contenedor=  document.getElementById("coche");
+            var e = window.event || event;
+            
+            //console.log(parseInt(contenedor.style.left.length))
+            //39 derecha 37 izquierda, 38 arriba, 40 abajo
+            if(e.keyCode == 39){pos += 10;if(pos<0){pos=0};if(pos>max_rigth){pos=max_rigth};contenedor.style.left = pos +'px';}
+            else if(e.keyCode == 37){pos-=10;if(pos<0){pos=0};contenedor.style.left = pos +'px';}
+            else if(e.keyCode == 40){pos2 += 10;if(pos2<0){pos2=0};if(pos2>max_bottom){pos2=max_bottom};contenedor.style.top = pos2 +'px';}
+            else if(e.keyCode == 38){pos2 -= 10;if(pos2<0){pos2=0};if(pos2>max_bottom){pos2=max_bottom};contenedor.style.top = pos2 +'px';}
+            else if(e.keyCode == 32){contenedor.style.left='0px'; contenedor.style.top='0px'; pos = 0; pos2 = 0;}
+            //contenedor.style.left = parseInt(contenedor.style.left)+ 200 +'px';
+            //console.log(parseInt(contenedor.style.left.length))
+        }
+
+        </script>
+        
+    </body>
+</html>

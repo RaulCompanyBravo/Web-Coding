@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <meta charset="UTF-8">
+    <script src="./js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="./js/Ejercicio1.js" type="text/javascript"></script>
+    <style type="text/css">
+        body{background-color:grey;
+        }
+        h1{
+            font-family:Verdana;
+            color:darkblue;
+        }
+        fieldset{
+            border:solid thin yellow;
+            font-family:Verdana;
+            bolder-radius:10px;
+            font-size:14px;
+            background-color:yellow;
+        }
+        .pregunta{
+            font-family:verdana;
+            font-size:16px;
+            font-weight:bold;
+            color:darkblue;
+            margin-right:20px;
+            margin-left:20px;
+        }
+        .respuesta{
+            font-family:verdana;
+            font-size:16px;
+            font-weight:bold;
+            color:darkblue;
+            margin-right:40px;
+            margin-left:20px;
+            padding:6px;
+        }
+    </style>
+    <body>
+<input type="color" name="inputcolor" id="colorinput"/>
+<h1>Preguntas más frequentes sobre CSS</h1>
+
+<fieldset class="pregunta">P:Diferencia entre id y class</fieldset>
+<div class="respuesta" hidden>
+R:Los elementos HTML pueden tener un atributo id y / o un atributo class. El atributo id asigna un nombre a un elemento determinado y debe haber un solo elemento con ese nombre. El atributo class asigna un elemento a una determinada clase y en general no puede haber más de un elemento con el mismo atributo class. CSS te permite aplicar estilos a un atributo id y / o class concreto.
+Utiliza un estilo específico de id cuando desees restringir las reglas de estilo a un bloque o elemento concreto. Este estilo lo usará un solo elemento con ese id concreto.
+Usa un estilo específico de class cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.
+</div>
+<fieldset class="pregunta">P:Jerarquía de los elementos HTML</fieldset>
+<div class="respuesta" hidden>
+R:La forma en que se aplican los estilos CSS a los elementos HTML depende también de la jerarquía de los elementos. Es importante recordar que una regla que se aplica a un descendiente reemplaza el estilo del padre, a pesar de la especificidad o la prioridad de las reglas CSS.
+</div>
+<fieldset class="pregunta">P:Restaurar el valor de la propiedad predeterminado</fieldset>
+<div class="respuesta" hidden>
+R:Debido a que CSS no proporciona una palabra clave "predeterminada", la única manera de restaurar el valor predeterminado de una propiedad es volver a declarar explícitamente dicha propiedad.
+Por lo tanto, debes tener especial cuidado al escribir reglas de estilo usando selectores (por ejemplo, los selectores por nombre de etiqueta, como p ) que tal vez desees reemplazar con reglas más específicas (como las que usan id o selectores de clase), porque el valor predeterminado original no puede restablecerse automáticamente.
+Debido a la naturaleza en cascada de CSS, es una buena práctica definir reglas de estilo de una manera lo más concreta posible para evitar aplicar estilo a elementos a los que no se tenía previsto aplicar.
+</div>	
+<fieldset class="pregunta">P:Estilos derivados</fieldset>
+<div class="respuesta" hidden>
+R:CSS no permite que se defina un estilo según los términos de otro. (Consulta la nota de Eric Meyer acerca de la postura del Grupo de trabajo). Sin embargo, la asignación de múltiples clases a un solo elemento puede proporcionar el mismo efecto.
+</div>
+<fieldset class="pregunta">P:Normas de estilo que no funcionan</fieldset>
+<div class="respuesta" hidden>
+R:Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las Reglas de estilo de CSS del Inspector DOM para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
+</div>	
+
+<fieldset class="pregunta">P:Uso de una propiedad abreviada</fieldset>
+<div class="respuesta" hidden>
+R:Está bien usar las propiedades abreviadas para la definición de reglas de estilo, ya que utiliza una sintaxis muy compacta. Usar la abreviatura con sólo algunos atributos es posible y correcto, pero hay que recordar que los atributos no declarados se restablecen a los valores predeterminados automáticamente. Esto significa que una norma anterior para un solo atributo podría ser reemplazada implícitamente.
+</div>
+<fieldset class="pregunta">P:Especificidad en CSS</fieldset>
+<div class="respuesta" hidden>
+R:Cuando se aplican múltiples reglas a un determinado elemento, la norma escogida depende de su especificidad de estilo. El estilo en línea (en los atributos HTML style) es lo primero, seguido por los selectores id, a continuación, los selectores class y, finalmente, los selectores element-name.
+</div>
+    </body>
+</html>

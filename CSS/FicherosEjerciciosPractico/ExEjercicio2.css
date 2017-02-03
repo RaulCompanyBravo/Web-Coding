@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#contenedor{border:solid;width: 100%; line-height:130%;}
+
+#cabecera{padding:10px;color:#fff;background-color:#becdfe;}
+
+h1{background-color:#becdfe;padding:10px;}
+
+#columna1{float: left;width: 200px;padding:1em;}
+
+#columna2{margin-left:210px;border-left:solid;
+border-left-width:1px;padding:1em;width: 1000px;}
+
+#pie{border-bottom:solid;background-color:#becdfe;
+padding:10px;clear:both;color:#fff}

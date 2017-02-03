@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <meta charset="utf-8">
+
+
+    <body>
+	<script src="./jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="./script2.js" type="text/javascript"></script>
+        <form method="post" id="myForm">
+    <table bgcolor="beige" border="1">
+         <tr>
+             <td>Texto a seleccionar <input type="text" id="txt" name="txt" class="required" /></td>
+             <td id="azul1" name="azul1"></td>
+         </tr>
+        <tr>
+             <td>Valor <select id="lista" name="lista">    
+       <option  value="Windows" selected="selected">Windows</option>
+       <option  value="Machintosh">Mac</option>
+       <option  value="Linux">Linux</option>
+   </select></td>
+             <td id="pos"></td>
+         </tr>
+          <tr>
+             <td><input id="amarillo" type="radio" name="colores" value="Amarillo" >Amarillo</input> <input id="rojo" type="radio" name="colores" value="Rojo" >Rojo</input><input id="verde" type="radio" name="colores" value="Verde">Verde</input></td>
+             <td id="color"> </td>
+         </tr>
+         <tr>
+         <td><input type="button" name="boton" id="boton" value="Cambiar color a rojo"/></td>
+         </tr>
+        
+        </table>
+        
+    </form>
+
+    </body>
+</html>

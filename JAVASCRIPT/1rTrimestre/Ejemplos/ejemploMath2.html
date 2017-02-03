@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplos Objeto Math</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Juan Mateu">
+</head>
+<body>
+<h1> Objeto Math </h1>
+<script type="text/javascript">
+
+    /* Ejemplos JavaScript del objeto Math*/
+
+    //Formateo de Números
+    var numero=500.66666;
+
+    //resultado será 501
+    document.write(Math.round(numero) + "<br>");
+
+    //el resultado será 500
+    document.write(Math.floor(numero) + "<br>");
+
+    //el resultado será 501
+    document.write(Math.ceil(numero) + "<br>");
+
+    numero=1.523;
+
+    //el resultado será 2
+    document.write(Math.ceil(numero) + "<br>");
+
+    //el resultado será 1
+    document.write(Math.floor(numero) + "<br>");
+    
+    //el resultado será 2
+    document.write(Math.round(numero) + "<br>");
+
+    numero=-2.62;
+
+
+    document.write("El número es: " + numero + "<br>");
+
+    //el resultado será -3
+    document.write("Redondeamos el número: " + Math.round(numero) + "<br>");
+
+    /* coger parte entera y parte decimal usando el método split del objeto String */
+    var numCadena=numero.toString();
+    var cadena=numCadena.split(".");
+    var parteEntera=cadena[0];
+    var parteDecimal=cadena[1];
+    document.write("La parte entera es: " + parteEntera + "<br>");
+    document.write("La parte decimal es: " + parteDecimal + "<br>");
+
+    //ejemplos del método toFixed()
+    num=6.4321528;
+
+    //resultado: 6.432
+    document.write("Número: " + num + ". Resultado con toFixed(3): " + num.toFixed(3) + "<br>");
+    
+    //resultado: 6.4322
+    document.write("Número: " + num + ". Resultado con toFixed(4): " + num.toFixed(4) + "<br>");
+
+    //resultado: 6.432153
+    document.write("Número: " + num + ". Resultado con toFixed(6): " + num.toFixed(6) + "<br>");
+
+    /* si no le pasamos ningún valor se redondea si parte decimal: El resultado es: 6 */
+    document.write("Número: " + num + ". Resultado con toFixed(): " + num.toFixed() + "<br>");
+
+    var valorMinimo=Math.min(0,24,4,12,-3,21);
+    document.write("El valor mínimo es:  " + valorMinimo + "<br>");
+
+    var valorMaximo=Math.max(4,12,46,21,13);
+    document.write("El valor máximo es: " + valorMaximo + "<br>");
+ 
+    //valores aleatorios de 1 a 100
+    var aleatorio=Math.floor((Math.random()*100)+1);
+    document.write(aleatorio);
+</script>
+
+
+</body>
+</html>

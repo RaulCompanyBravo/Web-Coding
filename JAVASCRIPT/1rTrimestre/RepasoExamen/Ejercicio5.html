@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Strings</h1>
+        <script type="text/javascript">
+                //Opción uno
+            var frase="Hola Pepe. Soy Carlos. Adiós";
+            var frase_D = []
+            frase_D=frase.split(".");
+            console.log(frase_D[1])
+                
+                //Opción 2
+            var frase="Hola Pepe. Soy Carlos. Adiós";
+            /*console.log(frase.indexOf(".")+1)
+            console.log(frase.lastIndexOf(".")-1)*/
+            console.log(frase.substring(frase.indexOf(".")+1,frase.lastIndexOf(".")))
+            
+        </script>
+    </body>
+</html>

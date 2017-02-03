@@ -1,0 +1,12 @@
+/* Utilizando el diagrama que se muestra en la figura 2, escribir reglas
+de estilo que hace que cada uno de los elementos que se describen a continuaci´on
+tengan color rojo (color:rojo;). Escribe el selector tan eficientemente como sea
+posible. */
+body, h2 ,h1 ,p ,div ,ul {color:red;} 
+body{color:red;}
+h2{color:red;}
+h1,p{color:red;}
+.special{color:red;}
+#intro{color:red;}
+#main	strong{color:red;}
+h2+p{color:red} /*  */

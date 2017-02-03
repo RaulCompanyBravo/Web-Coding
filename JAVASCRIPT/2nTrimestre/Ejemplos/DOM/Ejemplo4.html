@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8"></head>
+<style type="text/css">
+    .colorRojo{color:red;}
+    .colorAzul{color:blue;}
+</style>
+    <body>
+        
+<a href="https://www.google.es">Google</a>
+<a href="http://www.as.com">OtroLink</a>
+    <button onclick="cambiarLinks()">Cambiar links</button>
+        <script type="text/javascript">
+        function cambiarLinks(){    
+            var d_link=document.getElementsByTagName("a");
+            d_link[0].setAttribute("href","http://www.marca.com");
+            d_link[1].setAttribute("href","http://www.nvidia.es/");
+        }
+        </script>   
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8"></head>
+    <body>
+        <script type="text/javascript">
+            function calc(v){
+              if(v==null){
+                var v1=v;
+              } else {
+                var v2=v;
+              }
+              switch(op){
+                case '+':
+                  return v1+v2;
+                case '-':
+                  return v1-v2;
+                case '*':
+                  return v1*v2;
+                case '/':
+                  return v1/v2;
+              }
+            }
+            
+            var numeros=new Array();
+            function guardarNum(v){
+              if (v=="+" || v=="-" || v=="*" || v=="/"){
+                op = v;
+              } else {
+              numeros.push(v);
+              //console.log(numeros);
+              
+              var c = numeros[0]+op+numeros[1]
+              console.log(c);
+              var c2 = parseInt(c)
+              console.log(c2)
+              }
+            }
+            
+            function probarSum(v){
+              do{
+                var valor=v;
+                
+                
+              }while(v=="+" || v=="-" || v=="*" || v=="/")
+              
+            }
+            
+            function test1(i){
+             for(var x=0;x<numeros.length;x++){
+               
+             }
+            }
+            
+            
+            
+            
+        </script>
+         <form name="form">
+        
+            <table border="3" align="center">
+
+                <tr>
+                    <th height="20" colspan="5"><div id="calculando" class="blanco"></div></th>
+                </tr>
+                <tr>
+                    <td><button name="SQRT" onclick="">SQRT</button></td>
+                    <td><button name="EXP">EXP</button></td>
+                    <td><button name="LOG">LOG</button></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button name="SENO">SENO</button></td>
+                    <td><button name="COSENO">COSENO</button></td>
+                    <td><button name="TAN">TAN</button></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button name="MC">MC</button></td>
+                    <td><input type="button" onclick="guardarNum(7)" name="7" value="7"/></td>
+                    <td><input type="button" onclick="guardarNum(8)" name="8" value="8"/></td>
+                    <td><input type="button" onclick="calc(9)" name="9" value="9"/></td>
+                    <td><input type="button" onclick="guardarNum('+')" name="op" value="+"/></td>
+                </tr>
+                <tr>
+                    <td><button name="MR">MR</button></td>
+                    <td><input type="button" onclick="calc(4)" name="4" value="4"/></button></td>
+                    <td><input type="button" onclick="calc(5)" name="5" value="5"/></button></td>
+                    <td><input type="button" onclick="calc(6)" name="6" value="6"/></button></td>
+                    <td><input type="button" onclick="" name="op" value="-"/></td>
+                </tr>
+                <tr>
+                    <td><button name="MS">MS</button></td>
+                    <td><input type="button" onclick="calc(1)" name="1" value="1"/></td>
+                    <td><input type="button" onclick="calc(2)" name="2" value="2"/></td>
+                    <td><input type="button" onclick="calc(3)" name="3" value="3"/></td>
+                    <td><input type="button" onclick="" name="op" value="*"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="" name="=" value="="/></td>
+                    <td><input type="button" onclick="" name="0" value="0"/></td>
+                    <td><input type="button" onclick="" name="." value="."/></td>
+                    <td><input type="button" onclick="" name="CLEAR" value="CLEAR"/></td>
+                    <td><input type="button" onclick="" name="op" value="/" /></td>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>
+    </body>
+</html>

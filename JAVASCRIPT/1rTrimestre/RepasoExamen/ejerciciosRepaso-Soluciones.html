@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validación Formularios JavaScript</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Juan Mateu">
+	
+</head>
+<body>
+
+<form id="form1">
+ <label for="codpostal"> Código Postal </label>
+ <input type="text" id="codigoPostal" onchange="comprobarCodPostal()" /> <br/> <br/>
+ <label for="provincia"> Provincia </label>
+ <input type="text" id="provincia"/> <br/> <br/>
+  <input type="submit" value="Enviar"/>
+</form>
+
+
+
+<script type="text/javascript">
+   /* se ofrecen algunas soluciones que se han utilizado algunos funciones JavaScript con tal de repasar aunque pueden usarse otras funciones alternativas más sencillas*/
+
+     //EJERCICIO 1 (EXPRESIONES REGULARES)
+     /*
+     var dni=prompt("Introduzca un DNI");
+
+     var exprRegular=new RegExp("^[0-5][0-9]{7}-[A-Z]$","g");
+
+     if(exprRegular.test(dni)){
+     	  alert("El dni es correcto");
+     } else{
+     	alert("El dni es incorrecto");
+     }
+     */
+
+
+      /*************************/
+     //EJERCICIO 2 (EXPRESIONES REGULARES)
+     /*
+     var telefono=prompt("Dame un teléfono");
+     //no es necesario introducir el método isNaN()
+     if( /^\d{9}$/.test(telefono)){
+     	 alert("El teléfono es correcto");
+     }else{
+     	  alert("El teléfono es incorrecto");
+     } 
+     */
+
+     /*************************************/
+
+     //EJERCICIO 3 (EXPRESIONES REGULARES)
+      //validación de teléfono móvil
+      /*
+      var telefono=prompt("Dame un teléfono");
+
+      if( /^[67]\d{8}$/.test(telefono)){
+      	  alert("El teléfono móvil es correcto");
+      }else{
+      	 alert("El teléfono móvil es incorrecto");
+      }
+      */
+
+      //OBJETO STRING 
+      // EJERCICIO 4: PASAR A MAYÚSCULAS LAS VOCALES DE UNA CADENA.
+      /*
+      var cadena=prompt("Dame una cadena");
+      var cadena2="";
+      for(var i=0;i<cadena.length;i++){
+      	  switch(cadena.charAt(i).toLowerCase()){
+      	  	 case 'a':case 'e': case 'i': case 'o': case 'u':
+                 cadena2+=cadena.charAt(i).toUpperCase();
+                 break;
+              default:
+                  cadena2+=cadena.charAt(i);
+      	  }
+      }
+      document.write(cadena2);
+     */
+
+
+      /****************************************/
+      /* EJERCICIO 5: MOSTRAR LA FRASE DE EN MEDIO
+         Aquí sería más cómodo usar la función split pero con tal de practicar el indexOf para obtener una determinada posición a partir de un caracter específico.
+      /*
+      var frase="Hola Edelmiro Fernández. Soy Carlitos González Vidal. Adiós amigo";
+
+      var posicion=frase.indexOf(".");
+      var frase2=frase.substring(posicion+1,frase.length);
+      var posicion2=frase2.indexOf(".");
+      //document.write(frase2 + "<br>");
+      var fraseFinal=frase2.substring(0,posicion2);
+      document.write("La frase inicial es: " + frase + "<br>");
+      document.write("La frase correcta es: " +fraseFinal);
+      */
+
+      /***************************************/
+      //EJERCICIO 6: OBJETO ARRAY
+       /*
+      var palabras_espanya=new Array("Facebook","Tuenti","Youtube","Hotmail","Marca");
+      var palabras_suiza=new Array("Facebook","Youtube","Hotmail","Google","Blick");
+      var palabras_portugal=new Array("Facebook","Youtube","Hotmail","Jogos","Download");
+
+      //las filas serán los países y las columnas las palabras más buscadas en Internet
+      var palabras_mas_buscadas=new Array(palabras_espanya,palabras_portugal,palabras_suiza);
+
+      //recorrida del array bidimensional
+
+      document.write("<table border='1'>");
+      for(var i=0;i<palabras_mas_buscadas.length;i++){
+      	 document.write("<tr>");
+      	 document.write("<td><b>Estado " + i + "</b></td>");
+      	 for(var j=0;j<palabras_mas_buscadas[i].length;j++){
+      	 	document.write("<td> " + palabras_mas_buscadas[i][j] + "</td>");
+      	 }
+      	 document.write("</tr>");
+      }
+      document.write("</table>");
+       */
+
+
+
+    
+      /************************/
+      //EJERCICIO 7: CONSTRUCTORES, OBJETOS...
+        
+        /*
+       function Coche(marca,modelo,precio){
+       	 this.marca=marca;
+       	 this.modelo=modelo;
+       	 this.precio=precio;
+       }
+
+       var coche1=new Coche("Renault","Laguna",18000);
+       var coche2=new Coche("Ford","Mondeo",23000);
+       var coche3=new Coche("Seat","Córdoba",19200);
+
+       function sumarIVA(){
+       	 return Math.round(this.precio * 1.18);
+       }
+        //añadimos un nuevo método posteriormente a la creación del constructor.
+       Coche.prototype.sumarIVA=sumarIVA;
+
+       document.write("Coche 1: " + coche1.sumarIVA() + "<br>");
+       document.write("Coche 2: " + coche2.sumarIVA() + "<br>");
+       document.write("Coche 3: " + coche3.sumarIVA() + "<br>");
+       
+       /*
+
+      /********************/
+       //EJERCICIO 8: FORMULARIOS Y VALIDACIONES
+       function comprobarCodPostal(){
+
+        //creamos un vector o array con las provincias indicadas en el ejercicio
+       	  var provincias=new Array("Álava","Albacete","Alicante","Almería","Ávila","Bajadoz");
+
+          //recogemos el valor del código postal del formulario
+       	  var valor=document.getElementById("codigoPostal").value;
+         
+       	  var provincia=document.getElementById("provincia");
+
+       	  if(valor.length==0 || valor==null){
+       	  	 alert("Debes de indicar un código postal");
+       	  	 return false;
+       	  }else if(valor.length>5){
+       	  	 alert("El código postal debe tener 5 dígitos");
+       	  	 return false;
+       	  }else if(valor.length==5){
+       	  	 var primerascifras=valor.substring(0,2);
+       	  	 var cifrasEnteras=parseInt(primerascifras);
+       	  	 if(cifrasEnteras<0 || cifrasEnteras>52){
+       	  	 	 alert("Código Postal incorrecto");
+       	  	 	 return false;
+       	  	 }
+       	  	 
+       	  	 //alert(provincias[cifrasEnteras-1]);
+       	  	 provincia.value=provincias[cifrasEnteras-1];
+       	  }
+
+
+       	  return true;
+       }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8"> </head>
+    <body>
+        <h1>ARRAY</h1>
+        <script type="text/javascript">
+            var espana=new Array("España","Fcaebook","Tuenti","Youtube","Hotmail","Marca");
+            var suiza=new Array("Suiza","Facebook","Youtube","Hotmail","Google","Blink");
+            var portugal=new Array("Portugal","Facebook","Youtube","Hotmail","Jogos","Donwload");
+            var paises=new Array(espana,suiza,portugal);
+            
+        document.write("<table border=1>")
+            document.write("<tr>" +"<th>" +"[Pais,Ranking]" +"</th>")
+            for(var y=0;y<5;y++){
+                document.write("<th>" +y +"</th>")
+            }
+            document.write("</tr>")
+            for(var x=0;x<3;x++){
+                document.write('<tr align="center">' +"<th>" + paises[x][0] +"</th>")
+                for(var t=1;t<paises[x].length;t++){
+                    document.write("<td>" +paises[x][t] +"</td>")
+                }
+            document.write("</tr>")
+                
+            }
+        </script>
+        </table>
+    </body>
+</html>

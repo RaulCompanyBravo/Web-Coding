@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head> <meta charset="UTF-8">
+        <body>
+            <script type="text/javascript">
+                var numRandom = Math.floor(Math.random()*100+1); //Genera el número aletorio
+                var contador = 0; //Va almacenando lo intentos
+                //document.write(numRandom)
+                var ok=false; //Variable para finalizar el bucle
+            
+                alert("Bievenido, debes adivinar el numero entre 1 y 100")
+                do{ //Bucle para preguntar hasta que acierte el número
+                var numUsuario = prompt("Introduzca el número que cree que es. Ecriba FIN para terminar");
+                //document.write("Numero random: " +numRandom);
+                //document.write("Numero uuario: " +numUsuario);
+                if(numUsuario==numRandom){ //Comprueba si ha acertado, //!!PREGUNTAR PORQUE NO FUNCIONA EN EL SWITCH¡¡
+                    contador++
+                    document.write("Has acertado!! el número es: " +numRandom +"<strong>" +" (intentos: " +contador +")" +"</strong>");
+                    ok=true;
+                }
+                switch(numUsuario){ //SWITCH el cual finaliza si el valor es FIN y va motrando si el numero es mayor o menor
+                    case "FIN": 
+                    case "fin":  
+                        document.write("No ha podido adivinarlo muajajajaja")
+                        ok=true;
+                    default: 
+                        contador++
+                        if(numUsuario<numRandom){
+                            document.write("El número es más grande que " +numUsuario +"<strong>" +" (intentos: " +contador +")" +"<br>" +"</strong>");
+                        } else if (numUsuario>numRandom){
+                            document.write("El número es más pequeño que " +numUsuario +"<strong>" +" (intentos: " +contador +")" +"<br>" +"</strong>");
+                        }
+                }
+                }while (ok==false)
+            </script>
+
+        </body>
+    </head>
+</html>

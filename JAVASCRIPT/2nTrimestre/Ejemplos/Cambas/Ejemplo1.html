@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <script type="text/javascript">
+            var posX=100;
+            var posY=100;
+            var canvas=document.getElementById("canvas");
+            var contexto_canvas=canvas.getContext("2d")
+            //contexto_canvas.fillStyle="yellow";
+            contexto_canvas.fillRect(posX,posY,85,85) //x,y,width,height
+            window.addEventListener("keydown",manejador)
+            
+            function manejador(){
+                var evento= event || window.event;
+                switch(evento.keyCode){
+                    case 37:
+                        limpiarCanvas();
+                        contexto_canvas.fillStyle="red";
+                        posX-=10;
+                        contexto_canvas.fillRect(posX,posY,85,85);
+                        
+                        break;
+                    case 38:
+                        limpiarCanvas();
+                        contexto_canvas.fillStyle="orange";
+                        posY-=10;
+                        contexto_canvas.fillRect(posX,posY,85,85);
+                        
+
+                        break;
+                    case 39:
+                        limpiarCanvas();
+                        contexto_canvas.fillStyle="blue";
+                        posX+=10;
+                        contexto_canvas.fillRect(posX,posY,85,85);
+                        
+     
+                        break;
+                    case 40:
+                       limpiarCanvas();
+                       contexto_canvas.fillStyle="green";
+                        posY+=10;
+                        contexto_canvas.fillRect(posX,posY,85,85);
+                        
+                        break;
+                
+                    case 32:
+                        limpiarCanvas();
+                       
+                        break;
+                }
+                function limpiarCanvas(){
+                canvas.width=canvas.width;
+                //contexto_canvas.fillStyle="red";
+                }
+                
+            }
+        </script>
+        
+    </body>
+</html>

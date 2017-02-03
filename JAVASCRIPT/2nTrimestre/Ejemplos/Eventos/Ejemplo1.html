@@ -1,0 +1,59 @@
+<html>
+    <head></head>
+
+    <body> <!-- onlcick al hacer click, onmouseover cuando este encima, onmouse move cuando se mueva el raton, 
+                onmnouseup cuando sueltes el clic, onmousedown al hacer clic
+                onclick="manejarEvento(event)"
+    onmouseover="manejarEvento(event)"
+    onmousemove="manejarEvento(event)"
+    onmouseup="manejarEvento(event)"
+    onmousedown="manejarEvento(event)"
+                
+                -->
+    <div id="div1" style="width:100px;heigth:100px;background-color:yellow;" 
+
+    
+    />
+    
+        <div id="div2" style="width:100px;heigth:100px;background-color:yellow;"  />
+    
+    
+    <button id="btn1" onclick="clic()" name="btn1" value="HAZ CLIC">HAZ CLIC</button>
+       <script type="text/javascript">
+        var boton= document.getElementById('btn1');
+            function clic(){
+                alert('hola');
+                alert('adios');
+            }
+        boton.addEventListener("click",function(){ //podemos asociar varios eventos ocn addeventlistener();
+            this.style.backgroundColor="red";
+        });
+        function manejarEvento(event){
+            console.log(event.type)
+        }
+        document.onclick=EventRaton;
+        
+        function EventRaton(evento){
+            var evento1= evento || window.event;
+            var coordenandaX=evento1.clientX;
+            var coordenandaY=evento1.clientY;
+            
+            console.log("Cordenandas " +coordenandaX + " " +coordenandaY)
+            
+        }
+        
+        window.onload=function(){
+            document.onkeyup=mostratInfoTeclado;
+        }
+        
+        function mostratInfoTeclado(evento){
+            var contenedor= document.getElementById('div2');
+            var evento_= window.event || evento;
+            var mensaje="Tipo de vento: " +evento_.type +" " +evento_.keyCode 
+            + " " +evento_.charCode +"  " +String.fromCharCode(evento_.charCode)
+            contenedor.innerHTML+="<br>" +mensaje;
+        }
+        </script>
+
+    </body>
+</html>

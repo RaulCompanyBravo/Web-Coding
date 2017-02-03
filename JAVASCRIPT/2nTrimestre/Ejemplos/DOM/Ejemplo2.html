@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8"></head>
+    <body>
+        <button onclick="crearBoton()">Añadir botón</button>
+        <script type="text/javascript">
+        function crearBoton(){
+        
+            var boton=document.createElement("button");
+            var contenido=document.createTextNode("Botón nuevo");
+            boton.appendChild(contenido);
+            document.body.appendChild(boton);
+        }
+            
+        </script>
+
+    </body>
+</html>

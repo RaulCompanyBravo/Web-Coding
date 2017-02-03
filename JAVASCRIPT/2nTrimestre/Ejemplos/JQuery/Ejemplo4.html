@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+    <body>
+        <p id="p1">Parrafo 1</p>
+        <p id="p2">Parrafo 2</p>
+        <p id="p3">Parrafo 3</p>
+        
+        <button id="boton1">Insertar antes p1</button>
+        <button id="boton2">Insertar despues p1</button>
+        <button id="boton3">Borrar p1</button>
+        
+        <script type="text/javascript">
+            $("#boton1").click(function(){
+                $("<span>Texto antes del pi insertado</span>").insertBefore("#p1")
+                $("#p1").before("contenido antes del p3")
+            });
+            $("#boton2").click(function() {
+                $("<span>Texto antes del pi insertado</span>").insertAfter("#p1")
+                $("#p1").after("contenido antes del p1")
+            })
+                $("#boton3").click(function() {
+                $("#p3").remove();
+            })
+            
+        </script>
+    </body>
+</html>

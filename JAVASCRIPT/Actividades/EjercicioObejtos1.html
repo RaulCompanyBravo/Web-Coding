@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script type="text/javascript">
+            var cancion={
+                artista: "Pepe",
+                anyo: "2013",
+                tema: "Pepe and friends",
+                
+                getInfo:function(){
+                    return "El artista es " +this.artista +" del anyo " +this.anyo +" y la cancion es " +this.tema;
+                } 
+            }
+            function Prenda(ntipo,tejido,color){
+                this.ntipo=ntipo;
+                this.tejido=tejido;
+                this.color=color;
+            }
+            var falda=new Prenda("Falda","Lana","Azul");
+            var camisa= new Prenda("Camisa","Lana","Negro");
+            var pantalon=new Prenda("Pantalon","Vaquero","Azul Oscuro");
+            
+            var prendas=new Array(falda,camisa,pantalon);
+            var tejido="tejido" in falda;
+            console.log(tejido)
+            console.log(falda)
+            delete falda.tejido;
+            console.log(falda)
+            var tejido2 =new Prenda("Camisa","Lana","Rojo");
+            
+            var prenda4=Object.getOwnPropertyNames(falda);
+            console.log(prenda4);
+            console.log(Object.keys(falda))
+            
+            for (var prop in falda) {
+                console.log(prop +" = " +falda[prop])
+                
+            }
+            
+            var moto= new Object();
+            moto.marca="Honda";
+            moto.numRuedas=2;
+            moto.cilindrada=1000;
+            
+            moto.getMarca=function(){
+                return this.marca;
+            }
+            
+            console.log(moto.getMarca());
+            
+            function Coche(){
+            }
+            
+            Coche.prototype.marca="Ford"
+            Coche.prototype.modelo="Focus"
+            Coche.prototype.conductores= new Array("Pepe","Carmen")
+            var coche1=new Coche();
+            
+            console.log(coche1.conductores)
+            
+            function Coche2(color,marca,puertas){
+                this.color=color
+                this.marca=marca
+                this.puertas=puertas
+                this.conductores=new Array("Carlos","Laura")
+                
+               if(typeof Coche2._initialized == "undefined"){
+                    Coche2.prototype.mostrarColor=function(){alert(this.color)}
+                }
+                Coche2._initialized=true;
+            }
+                Coche2.prototype.mostrarColor=function(){alert("HOLA")}
+                var coche2=new Coche2("negro","Ford",5);
+                //coche2.mostrarColor();
+                
+                
+            function ClaseA(color){
+                this.color=color;
+                this.mostrarColor=function(){alert("Color: " +this.color)}
+            }
+            
+            function ClaseB(color,modelo){
+                this.metodo=ClaseA;
+                this.metodo(color);
+                delete this.metodo;
+                
+                this.modelo=modelo;
+                this.mostrarModelo=function(){alert("Modelo: " +this.modelo)}
+            }
+                var cocheB1=new ClaseB("blanco","focus");
+                //cocheB1.mostrarColor();
+                //cocheB1.mostrarModelo();
+                
+                function ClaseC(anyo){
+                    this.anyoFabricacion=anyo;
+                    this.mostrarAnyo=function(){alert("Año: " +this.anyoFabricacion)}
+                }
+                
+                function ClaseD(marca){
+                    this.metodo=ClaseC;
+                    this.marca=marca;
+                    this.metodo(anyoFabricacion);
+                    delete this.metodo;
+                    this.mostrarMarca=function(){alert(("Marca: " +this.marca))}
+                    
+                }
+                var cocheDef=new ClaseD("ferrari")
+                cocheDef.mostrarAnyo();
+                cocheDef.mostrarMarca()
+            
+        </script>
+    </body>
+</html>

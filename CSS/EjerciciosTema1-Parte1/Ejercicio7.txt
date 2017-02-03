@@ -1,0 +1,6 @@
+Ejercicio 7. Queremos que todos los elementos dentro de body tengan un borde
+¿puedes justificar por qu´e no a˜nadir´ıamos la propiedad border en el elemento
+body para que lo heredaran todos los elementos contenidos dentro de ´el?
+- Los elementos tales como los border o margenes no se transmiten de un 
+elemento a otro, para hacer esto se tendriamos que definir el border para cada
+elemento del HTML.

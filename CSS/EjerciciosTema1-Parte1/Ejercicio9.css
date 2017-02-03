@@ -1,0 +1,14 @@
+/*Es azul */
+context:visited { /* Una vez se haya visitado el link, aparecera morado */
+color: purple;
+}
+context:hover { /* Cuando el raton este encima del link este pasara a ser
+de color verde*/
+color: green;
+}
+context:active { /* En el momento en que se pulsa el link, cambiara a color rojo*/
+color: red;
+}
+context:link { /*El link es de color azul cundo no ha sido pulsado*/ 
+color: blue;
+}

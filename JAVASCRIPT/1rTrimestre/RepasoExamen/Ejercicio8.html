@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Formulario</h1>
+        <form>
+            <input type="text" name="cp" id="cp" onchange="comprobarCP()"/>
+            <input type="text" name="provincia" id="provincia"/>
+            <input type="submit" value="Submit"/>
+        </form>
+        
+        <script type="text/javascript">
+        function comprobarCP(){
+       	  var provincias=new Array("Álava","Albacete","Alicante","Almería","Ávila","Bajadoz");
+          var vCP = document.getElementById("cp").value;
+          var vProvincia = document.getElementById("provincia")
+          
+          if(vCP==null){
+              alert("Introduzca un codigo postal")
+              return false;
+          } else if(vCP.length>5 || vCP.length<5){
+              alert("INCORRECTO, Demasiado largo o corto")
+              return false;
+          }  else if(vCP.length==5) {
+              var pnum=parseInt(vCP.substring(0,2))
+              if(pnum<0 || pnum>52){
+                  alert("Codigo postal incorrecto 2 primeros num")
+                  return false;
+              }
+         	  	 vProvincia.value=provincias[pnum-1];
+
+          }
+          return true;
+        }
+            
+        </script>
+    </body>
+</html>

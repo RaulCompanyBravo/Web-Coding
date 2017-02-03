@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	document.write("<b>Probando tipos de variables</b> <br>")
+
+	var variable1=3; //Tipo number
+	document.write("Tipo: ");
+	document.write(typeof variable1);
+	document.write("<br>");
+	
+	variable1=4.86; //Tipo number
+	document.write("Tipo: ");
+	document.write(typeof variable1);
+	document.write("<br>");
+
+	variable1=true; //Tipo boolean
+	document.write("Tipo: ");
+	document.write(typeof variable1);
+	document.write("<br>");
+
+	variable1="HolaMundo"; //Tipo String
+	document.write("Tipo: ");
+	document.write(typeof variable1);
+	document.write("<br>");
+
+	var variable2; //Tipo undefined
+	document.write("Tipo: ");
+	document.write(typeof variable2);
+	document.write("<br>");
+
+	variable2=new String("Hola!!"); //Tipo object
+	document.write("Tipo: ");
+	document.write(typeof variable2);
+	document.write("<br>");
+
+	variable2=null;  //Tipo object
+	document.write("Tipo: ");
+	document.write(typeof variable2);
+	document.write("<br>");
+	document.write("----------------------------");
+	document.write("<br>");
+
+	document.write("<b>Suma</b><br>")
+	var miVariable=30;
+	var miVariable2=miVariable+10;
+	var miVariable3=prompt("Dame un número! (SUMA)"); // El prompt() devuelve un String
+	var miVariable4=parseInt(miVariable3)+miVariable2; // Convertimos el String que nos da el prompt a un number para poder sumar
+	document.write(miVariable4);
+	document.write("<br>");
+	document.write("----------------------------");
+	document.write("<br>");
+
+	
+	var dividendo=prompt("Introduza el dividendo");
+	var divisor=prompt("Introduzca el divisor");
+	var resultado;
+
+	//Estructura IF v1
+	divisor!=0 ? (resultado=dividendo/divisor) && alert(resultado) 
+		: alert("No se puede dividir entre cero");
+
+	//Estructura IF v2 -- En JavaScript comprar la cadena String con el number porque detecta los tipos, no siempre funciona, si no funciona aplicar un parseInt()
+	var edad=prompt("Dime tu edad"); //Al poner === tambien se compara el tipo de datos
+	if (parseInt(edad)===18){
+		 alert("Tienes 18 años")
+			}else{
+				alert("No tienes 18 años")
+			}
+	
+
+	</script>
+<!--
+Cuando la variable no está definida o sin un valor es de tipo undefined
+Usando "new" definimos un nuevo objeto que es de tipo object
+Estructura de if condicion ? correcto : incorrecto
+-->
+</head>
+<body>
+<script type="text/javascript">
+	document.bgColor="#FF8000"; //Color del fondo
+</script>
+</body>
+</html>

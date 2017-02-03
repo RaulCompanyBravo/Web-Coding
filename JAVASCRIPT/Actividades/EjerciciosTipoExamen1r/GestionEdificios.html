@@ -1,0 +1,177 @@
+<html>
+    <head><meta charset="UTF-8"></head>
+    <body>
+        <h1>Gestion de edificios</h1>
+        <script type="text/javascript">
+            function Edificio(calle,num,cod_Postal){
+                this.calle = calle;
+                this.num = num;
+                this.cod_Postal = cod_Postal;
+            
+                this.getCalle=function(){return this.calle};
+                this.getNum=function(){return this.num};
+                this.getcod_Postal=function(){return this.cod_Postal};
+                
+                this.setCalle=function(v){this.calle = v};
+                this.setNum=function(v){this.setNum = v};
+                this.setcod_Postal=function(v){this.cod_Postal = v};
+                
+                
+                this.mostar=function(){
+                    var cadena = "<b>Edificio:</b>" +"<br />" 
+                    +"Calle: " +this.getCalle() +"<br />" 
+                    +"Nº: " +this.getNum() +"<br />" 
+                    +"Codigo Postal: " +this.getcod_Postal() +"<br />" 
+                    return cadena;
+                }
+                     var plantas=new Array(5)
+                        for (var i=0; i <plantas.length; i++){
+                            plantas[i]=new Array(plantas.length)
+                    //console.log(plantas[i]);
+                        }
+                    
+                this.agregarPropietario=function(piso,puerta,nombre){
+                     //plantas[1][1]="Pepe";
+                      if(plantas[piso][puerta]==null){
+                            plantas[piso][puerta]=nombre;
+                        console.log("Agregado")
+                        console.log(plantas[2][1])
+                    } else {
+                        console.log("Ocupado")
+                    }
+                }
+                
+                this.listarPropietario=function(){
+                    for(var t=0;t<plantas.length;t++){
+                        for(var e=0;e<plantas.length;e++){
+                            if(plantas[t][e]!=null){
+                                document.write("Planta :" +t +" Piso: " +e +" se llama "+plantas[t][e] +"<br />");
+                            }
+                            
+                        }
+                    }
+                }
+                //console.table(plantas);
+            }
+     
+            
+            
+                //Edificios
+            var edificios =new Array();
+            var edificio1=new Edificio("Bandera",3,45266);
+                edificios.push(edificio1);
+
+            var edificio3=new Edificio("Salomes",12,98043);
+                edificios.push(edificio3);
+            var edificio4=new Edificio("Mecos",31,980321);
+                edificios.push(edificio4);
+            
+            
+            for(var x=0;x<edificios.length;x++){
+                document.write("<p>")
+              document.write(edificios[x].mostar());  
+            }
+            
+            function modificarNumero(v){
+                this.num = v;
+            }
+            function modificarCalle(v){
+                this.calle=v;
+            };
+            function modificarCodigoPostal(v){
+                this.cod_Postal = v;
+            }
+            function mostrarCalle(){
+                return this.calle;
+            };
+            function mostrarNumumero(){
+                return this.num;
+            };
+            function mostrarCodigoPostal(){
+                return this.cod_Postal;
+            };
+            function agregarPropietario(v){
+                
+            };
+            function mostrarPlantas(v){
+                
+            };
+            
+      //Añadir propietarios
+            edificio1.agregarPropietario(0,1,"Juan")
+            edificio1.agregarPropietario(3,3,"Tere")
+            //edificio1.agregarPropietario(2,1,"Raul")
+            edificio3.agregarPropietario(1,1,"Gob")
+            edificio3.agregarPropietario(3,3,"Moira Brown")
+            edificio3.agregarPropietario(2,2,"James")
+            edificio4.agregarPropietario(1,2,"Allistar")
+            edificio4.agregarPropietario(2,3,"Duke")
+            edificio4.agregarPropietario(3,2,"Annie Key")
+      
+            document.write("<br />")
+            document.write("<b>Edificio 1 </b>" +"<br />")
+            edificio1.listarPropietario();
+            document.write("<b>Edificio 3 </b>" +"<br />")
+
+            edificio3.listarPropietario();
+            document.write("<b>Edificio 4 </b>" +"<br />")
+
+            edificio4.listarPropietario();
+            document.write("<b>Edificio 1 </b>" +"<br />")
+            edificio1.listarPropietario();
+          
+            
+            
+            
+            
+            /*
+            console.log(edificio1.mostar());
+            console.log(edificio3.mostar());
+            console.log(edificio4.mostar());
+    function imprimirDatos2(){
+                    var cadena = "Codigo: "+this.productos[x].getCodigo()
+                    +"<br>" +"Nombre:" +this.productos[x].getNombre() +"<br>" +"Precio" 
+                    +this.productos[x].getPrecio() +"<br>" +"---------------------" +"<p>";
+                    return cadena;
+            }
+
+            var edificioPrueba=new Edificio("Bandera",3,45266);
+            console.log(edificioPrueba);
+            //console.log(edificioPrueba);
+            var vivienda={
+                piso:"f",
+                puerta:"f"
+                
+                this.setPiso
+            }
+
+             var plantas=new Array(4)
+                for (var i=0; i <4; i++){
+                    plantas[i]=new Array(4)
+                    //console.log(plantas[i]);
+                }
+                
+                
+                    plantas[1][1]="Pepe";
+                    plantas[2][1]="Laura";
+                    plantas[3][3]="Carlos";
+                  
+                    //console.log(plantas[2][1])
+                    
+                    for(var t=0;t<4;t++){
+                        for(var e=0;e<4;e++){
+                            console.log(plantas[t][e]);
+                        }
+                    }
+                    
+                    console.log("Probando if null")
+                    //plantas[1][1]="Pepe";
+                    console.log("plantas antes"+plantas[1][1])
+                    
+                   
+                    console.log("plantas despues" +plantas[1][1])
+                    */
+        </script>
+         
+    </body>
+</html>

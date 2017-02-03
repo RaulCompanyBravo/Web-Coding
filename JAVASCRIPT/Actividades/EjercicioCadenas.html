@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    
+    <script type="text/javascript" > //Devolver solo las consonates convertidas a mayusculas
+        
+        var cadena="Hola a todos";
+        //console.log(cadena.toUpperCase().split());
+        var vg2=[];
+        for(var y=0;y<cadena.length;y++){
+           var vg=cadena.split("");
+            
+            if(vg[y]=="a"||vg[y]=="e"||vg[y]=="i"||vg[y]=="o"||vg[y]=="u"){ //Compara si hay vocales en minuscula
+               vg2[y]=vg[y]; //Si hay una vocal minuscula la pone en el array
+               //console.log(vg[y])
+               vg2[y]=vg2[y].toUpperCase(); //Convierte a mayuscula
+              //console.log(vg2[y])
+            } else {
+                vg2[y]=vg[y]; //Si no hay vocal la añade sin convertir
+               // console.log(vg2[y])
+            }
+        }
+        
+        
+        for (var o=0;o<vg2.length;o++){ //Muestra los componetes del array
+            console.log(vg2[o]);
+        }
+        
+       console.log(vg2.toString()); //Convierte el array en string
+        
+        
+    </script>
+    
+    
+</html>

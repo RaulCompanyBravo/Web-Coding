@@ -1,0 +1,160 @@
+<html>
+    <head></head>
+    <style type="text/css">
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <body id="fondo">
+
+        
+        <img id="i1" class="ta1"></img>
+        <img id="i2" class="ta1"></img>
+        <img id="i3" class="ta1"></img>
+       
+        
+
+       <div id="f1" style="height:200px;width:200px;border-bottom-style:solid;" ondrop="drop(event)" ondragover="allowDrop(event)">1</div>
+       <div id="f2" style="height:200px;width:200px;border-bottom-style:solid;" ondrop="drop(event)" ondragover="allowDrop(event)">2</div>
+       <div id="f3" style="height:200px;width:200px;border-bottom-style:solid;" ondrop="drop(event)" ondragover="allowDrop(event)">3</div>
+       
+        <br />
+        <img id="r2" draggable="true" ondragstart="drag(event)"></img>
+        <img id="r1" draggable="true" ondragstart="drag(event)"></img>
+        <img id="r3" draggable="true" ondragstart="drag(event)"></img>
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){ //Jquery para realizar la animacion de las imagenes
+    $('img').mouseenter(function() {
+    $(this).css("cursor","pointer");
+    $(this).css("opacity","0.4")
+    $(this).animate({width: "20%"}, 'slow');
+});
+
+$('img').mouseleave(function() {   
+    $(this).animate({width: "200px"}, 'fast');
+    $(this).css("opacity","100")
+});
+  
+});
+
+ 
+var imgs = new Array(); //Creacionde array y añadirle contenido
+imgs.push("./imagenes/ajolote.jpg")
+imgs.push("./imagenes/ayeaye.jpg")
+imgs.push("./imagenes/cangrejo-yeti.jpg")
+imgs.push("./imagenes/gambaMantis.jpg")
+imgs.push("./imagenes/gatoEsfinge.jpg")
+imgs.push("./imagenes/hirola.jpg")
+imgs.push("./imagenes/musaranyaElefante.jpg")
+imgs.push("./imagenes/pezBruja.jpg")
+imgs.push("./imagenes/pezGota.jpg")
+
+//Generar numero para imagen aleatoria
+var op1 = Math.floor((Math.random() * 8) + 1);
+var op2 = Math.floor((Math.random() * 8) + 1);
+var op3 = Math.floor((Math.random() * 8) + 1);
+//Añadir images a la pagina
+document.getElementById("i1").setAttribute("src",imgs[op1]);
+document.getElementById("i1").setAttribute("name",imgs[op1]);
+
+document.getElementById("i2").setAttribute("src",imgs[op2]);
+document.getElementById("i2").setAttribute("name",imgs[op2]);
+
+document.getElementById("i3").setAttribute("src",imgs[op3]);
+document.getElementById("i3").setAttribute("name",imgs[op3]);
+//Añadair el atributo name
+document.getElementById("r1").setAttribute("src",imgs[op1].replace(".jpg",".png"));
+document.getElementById("r1").setAttribute("name",imgs[op1]);
+document.getElementById("r2").setAttribute("src",imgs[op2].replace(".jpg",".png"));
+document.getElementById("r2").setAttribute("name",imgs[op2]);
+document.getElementById("r3").setAttribute("src",imgs[op3].replace(".jpg",".png"));
+document.getElementById("r3").setAttribute("name",imgs[op3]);
+//Variables para comprobar
+    var c1;
+    var c2;
+    var c3;
+    var cont = 0;
+            
+function allowDrop(ev) {
+    ev.preventDefault();
+
+    //------------
+    /*
+    var img2= document.getElementById("f2");
+    var img2_ = document.getElementsByTagName("img")[0];
+    var img2___ = img2_.name;
+    if(img2___ == document.getElementById("i2").name){c2==true;console.log("OK2");} 
+    */
+    //------------
+        
+    //Drag and drop
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    //document.getElementById(this).setAttribute("name",imgs[op1]);
+}  
+
+function comp(){
+    var img1= document.getElementById("f1");
+    var img1_ = img1.getElementsByTagName("img")[0];
+    var img1___ = img1_.name;
+    console.log("img1___" +img1___);
+    console.log("opcopnabajojo" +document.getElementById("i1").name);
+    if(img1___ == document.getElementById("i1").name){c1=true;cont++;console.log(c1);} else {c1=false;console.log(c1)}
+    //--------------------------------------------
+    var img2= document.getElementById("f2");
+    var img2_ = img2.getElementsByTagName("img")[0];
+    var img2___ = img2_.name;
+    console.log("img2___" +img2___);
+    console.log("opcopnabajojo" +document.getElementById("i2").name);
+    if(img2___ == document.getElementById("i2").name){c2=true;cont++;console.log(c2);} else {c2=false;console.log(c2)}
+    //------------------------
+    var img3= document.getElementById("f3");
+    var img3_ = img3.getElementsByTagName("img")[0];
+    var img3___ = img3_.name;
+    console.log("img3___" +img3___);
+    console.log("opcopnabajojo" +document.getElementById("i3").name);
+    if(img3___ == document.getElementById("i3").name){c3=true;cont++;console.log(c3);} else {c3=false;console.log(c3)}
+    
+    //Comprobar resultado correcto
+    if(cont == 3){
+        document.getElementById("fondo").setAttribute("style","background-color:green;");
+        setTimeout(function(){location.reload();},1000);
+        
+    } else {
+        document.getElementById("fondo").setAttribute("style","background-color:red;")
+        setTimeout(function(){location.reload();},1000);
+        
+        
+    }
+        
+}
+
+
+/*
+
+var someimage = document.getElementById('this_one');
+var myimg = someimage.getElementsByTagName('img')[0];
+var mysrc = myimg.src;
+
+
+*/
+
+
+
+
+        </script>
+        <button onclick="comp()">Comprobar</button>
+    </body>
+</html>

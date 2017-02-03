@@ -1,0 +1,13 @@
+em{ margin :2em; }
+em{ margin :0.5em; 
+    padding: 0px 0.5px;
+    }
+#noticias, #publicidad, #principal, #secundario{padding: 0.5px;
+    }
+#pie{padding: 0.5px 0.5px;
+    }
+.articulo{ margin :0.5em;
+            }
+#publicidad {bottom-margin :1em ;}
+#pie{bottom-margin :1em}
+

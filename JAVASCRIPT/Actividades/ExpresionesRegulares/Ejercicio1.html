@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+                /* Ejemplo
+                var patron=new RegExp("^[0-5]{3}[6-9]{2}$")
+                
+                if(patron.test("12377")){
+                    document.write("Bien")
+                } else {
+                    document.write("Mal")
+                }
+                */
+                var patron=new RegExp("^[A-Z]{1,2}[' ']{1}[0-9]{4}[' ']{1}[A-Z]{3}$")
+                var numMatrucula=prompt("Inreoduce tu matricula H 0000 FFF")
+                document.write(numMatrucula)
+                if(patron.test(numMatrucula)){
+                    alert("Es correcta")
+                } else {
+                    alert("Es incorrecta")
+                }
+                
+                
+                
+                
+                
+                
+                
+                
+            </script>
+        </body>
+    </head>
+</html>

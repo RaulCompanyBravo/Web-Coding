@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	
+	
+	
+	console.time("vectorLiteral")
+		//var vector1=["elemento",4,false,undefined];
+		//var vector3=["gato",,"perro"]
+		//var vector2=new Array("elemento1","elemento2",3,true)
+		var vector4=new Array(100)
+	console.timeEnd("vectorLiteral")
+    //console.log(typeof vector4[65])
+
+    for(var t=0;t<vector4.length;t++){
+        vector4[t]=new Array(100)
+    }
+    
+    var vector5=new Array(2)
+    vector5[0]=[1,2,3,5]
+    vector5[1]=[5,6,8]
+    vector5[2]=[6,7,9]
+        console.log(vector5)
+        /*
+    vector6= new Array(3)    
+        for(var g=0;g<vector5.length;g++){
+            vector6[g]=new Array(3)
+                for(var y=0;y<vector5.length;){
+                   if(g==y){
+                       vector6[g][y]=1
+                   } else {
+                       vector6[g][y]=0;
+                   }
+                }
+        }
+        */
+        
+        
+        vector7=new Array("B","A","Z","M")
+        console.log(vector7.sort());
+
+function ordenarNum(a,b){
+    return a-b;
+}
+
+  vector7=new Array("B","A","Z","M");
+  vector8=new Array(3,9,1,2,100,5,10,99,0.75);
+        vector8.push(65,89)
+        vector8.shift(0)//Elimina la posicion
+        vector8.pop(0)
+        console.log(vector7.sort());
+        console.log(vector8.sort());//Sin funcion
+        console.log(vector8.sort(ordenarNum));//Con funcion
+        
+    var vector9=new Array("perro","elefante","gato")
+    vector9.splice(vector9.indexOf("elefante"),1)
+    console.log(vector9)
+    vector9.splice(vector9.indexOf("gato"),0,"tigre")
+    console.log(vector9)   
+    
+     var vector10=new Array("ab","cd","bb","ab")
+     
+     while(vector10.indexOf("ab")!=-1){
+         vector10.splice(vector10.indexOf("ab"),
+            1,"**");
+        }
+        console.log(vector10);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

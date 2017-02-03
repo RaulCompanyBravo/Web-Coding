@@ -1,0 +1,48 @@
+  body {
+      position: relative; 
+  }
+  #section1 {font-family: sans-serif; font-size: 20px; color: black; background-color: white;}
+  #section2 {font-family: sans-serif; font-size: 20px; color: black; background-color: white;}
+  #section41 {font-family: sans-serif; font-size: 20px; color: black; background-color: white;}
+
+
+  #nombrep{font-size: 5rem}
+
+  /*cambiar el color al nav de bootstrap*/
+  .navbar-inverse {
+    color:white;
+    background-color: blue;
+    border-color: #E01818;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #A90A0A;
+}
+
+#grey{background-color: grey;}
+
+.table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
+    border: none;
+}
+	
+	#inputnormal{width:15%!important;}
+	
+	
+	.form-control {
+  padding-right: 30px;
+  
+}
+
+.form-control + .glyphicon {
+  position: absolute;
+  left: 0;
+  padding: 8px 27px;
+}
+
+.widthpropio{width:40%!important;}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>CONSTRUCTORESYOBJETOS</h1>
+        <script type="text/javascript">
+            function Coche(nombre,modelo,precio){
+                this.nombre = nombre;
+                this.modelo = modelo;
+                this.precio = precio;
+                    //metodos get
+                this.getNombre=function(){return this.nombre}
+                this.getModelo=function(){return this.modelo}
+                this.getPrecio=function(){return this.precio}
+                
+                this.setNombre=function(v){this.nombre=v}
+                this.setModelo=function(v){this.modelo=v}
+                this.setPrecio=function(v){this.precio=v}
+                
+                this.toString=function(){
+                    var cadena= "El " +this.getNombre() +" modelo " +this.getModelo() 
+                    +", tiene el precio " +this.getPrecio();
+                    return cadena;
+
+                }
+                
+                this.sumarIVA=function(){
+                    this.precio = this.precio+this.precio*0.21;
+                    return this.toString();
+                }
+            }
+            
+            var Coche1=new Coche("Renault","Laguna",18000)
+            var Coche2=new Coche("Ford","Mondeo",23000)
+            var Coche3=new Coche("Seat","Cordoba",19200)
+
+        
+            console.log(Coche1.toString());
+            console.log(Coche1.sumarIVA());
+            
+            
+        </script>
+    </body>
+</html>

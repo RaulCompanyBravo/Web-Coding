@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <img src="1.png" id="imagen"/>
+        <script type="text/javascript">
+/*        function img(){
+        var cad;
+         for(var u=1;u<11;u++){ 
+           cad ='<img src="./img/'+u +'.png">';
+           return cad;
+         }
+         
+        }
+             
+   
+ */
+ 
+ var imagen=document.getElementById("imagen")
+ var vector = [];
+  var numeros=new Array();
+ for(var y=1;y<10;y++){numeros.push(y+".png")};
+ var indice = 0;
+ console.log(numeros);
+ 
+
+ 
+ function cambio(){
+     imagen.src=numeros[indice];
+     console.log(numeros[indice]);
+     indice++;
+     if(indice==10){indice=0}
+     
+ }
+    
+    setInterval("cambio()",500)
+    
+        
+       
+
+     //document.write(img());
+            //setInterval(img(u),3000);  
+            //setInterval(document.write(img(u)),1000);
+        
+        
+        
+        </script>
+    </body>
+</html>
